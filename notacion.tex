@@ -1,0 +1,109 @@
+\begin{notation}
+\renewcommand\arraystretch{1.5}
+
+\section*{Geometría básica}
+\begin{center}
+	%\begin{tabulary}{0.9\textwidth}{RCL}
+	\begin{tabular}{l c p{12cm}}
+		$\Rn{N}$ 							& : & Espacio euclideano de dimension $N$.
+		\\ 
+		$\notatScalar{p}$ 					& : & Valor escalar.
+		\\ 
+		$\notatVector{p}$ 					& : & Vector real.
+		\\
+		$\notatHomog{p}$ 					& : & Vector en coordenadas homogéneas.
+		\\
+		$\notatMatrix{A}$ 					& : & Matriz real.
+		\\
+		$\notatMatrix{I}$ 					& : & Matriz identidad (dimensión dependiente del contexto).
+		\\
+		$\notatMatrix{0}$					& : & Matriz de ceros (dimensión dependiente del contexto).
+		\\
+		$\notatFrame{A}$					& : & Sistema de referencia o \emph{frame} $A$.
+		\\
+		$\notationMatrixFrame{T}{C}{AB}$			& : & Matriz de transformación de $4\times4$ que transforma del sistema de coordenadas $\notatFrame{A}$ al $\notatFrame{B}$, definido en $\notatFrame{C}$.
+		\\
+		$\hatop{\left(\cdot\right)}$			& : & Operador sombrero o \emph{hat}.
+		\\
+		$\veeop{\left(\cdot\right)}$			& : & Operador \emph{vee}.
+		\\
+	\end{tabular} 
+	%\end{tabulary} 
+\end{center}
+
+\section*{Estadística y optimización}
+\begin{center}
+	%\begin{tabulary}{0.9\textwidth}{RCL}
+	\begin{tabular}{l c p{12cm}}
+		$\notatMatrix{\Sigma}$							& : & Matriz de covarianza.
+		\\
+		$\notatMatrix{\Omega}$							& : & Matriz de información, $\notatMatrix{\Omega} = \notatMatrix{\Sigma}^{-1}$.
+		\\
+		$\mahalanobisNorm{\cdot}{\notatMatrix{\Omega}}$	& : & Distancia de Mahalanobis con matriz de información $\notatMatrix{\Omega}$.
+		\\
+		$\mahalanobisNorm{\cdot}{\notatMatrix{\Sigma}}$	& : & Distancia de Mahalanobis con matriz de covarianza $\notatMatrix{\Sigma}$.
+		\\
+		$\huberNorm{\cdot}{\notatMatrix{\Omega}}$		& : & Distancia de Mahalanobis con kernel robusto Huber y matriz de información $\notatMatrix{\Omega}$		
+		\\
+		$\huberNorm{\cdot}{\notatMatrix{\Sigma}}$		& : & Distancia de Mahalanobis con kernel robusto Huber y matriz de covarianza $\notatMatrix{\Sigma}$.
+		\\
+		$\noisy{\left(\cdot\right)}$			& : & Distribución de probabilidad. Variable con ruido.
+		\\
+		$\optimum{\left(\cdot\right)}$			& : & Variable óptima, solución de un proceso de optimización.
+	\end{tabular} 
+	%\end{tabulary} 
+\end{center}
+
+\section*{Variedades y Grupos de Lie}
+\begin{center}
+	%\begin{tabulary}{0.9\textwidth}{RCL}
+	\begin{tabular}{l c p{12cm}}
+		$\notationManifold{M}{\notatManifold{x}}$ 	& : & Variedad o \emph{manifold}.
+		\\ 
+		$\notatManifold{X},\notatManifold{Z}$ 				& : & Elemento de la variedad diferenciable $\notationManifold{M}{\notatManifold{x}}, \notationManifold{M}{\notatManifold{z}}$.
+		\\
+		$\boxplus$ 				& : & Operador aditivo de una variedad. diferenciable $\notatManifold{M}$
+		\\
+		$\boxminus$ 				& : & Operador sustractivo de una variedad diferenciable $\notatManifold{M}$.
+		\\
+		$\SOthree$ 							& : & Grupo Ortogonal Especial (\emph{Special Orthogonal Group}).
+		\\ 
+		$\sothree$ 							& : & Álgebra de Lie asociada a $\SOthree$.
+		\\ 
+		$\SEthree$ 							& : & Grupo Euclideano Especial (\emph{Special Euclidean Group}).
+		\\
+		$\sethree$ 							& : & Álgebra de Lie asociada a $\SEthree$.
+		\\
+		$\Simthree$ 						& : & Grupo de semejanza (\emph{Similarity Group}).
+		\\
+		$\simthree$ 						& : & Álgebra de Lie asociada a $\Simthree$.
+		\\
+		$\Expmap{\cdot}$				& : & Mapa exponencial.
+		\\
+		$\ExpmapSEthree{\cdot}$			& : & Mapa exponencial de $\SEthree$.
+		\\
+		$\ExpmapSOthree{\cdot}$			& : & Mapa exponencial de $\SOthree$.
+		\\
+		$\Logmap{\cdot}$				& : & Mapa logarítmico.
+		\\
+		$\LogmapSEthree{\cdot}$			& : & Mapa logarítmico de $\SEthree$.
+		\\
+		$\LogmapSOthree{\cdot}$			& : & Mapa logarítmico de $\SOthree$.
+		\\
+		$\JacR{\cdot}$					& : & Jacobiano del grupo de Lie, definido \emph{por la derecha}.
+		\\
+		$\JacL{\cdot}$					& : & Jacobiano del grupo de Lie, definido \emph{por la izquierda}.
+		\\
+		$\Adjop{\cdot}$					& : & Representación adjunta (\emph{adjoint}) de un elemento del grupo de Lie.
+		\\
+		$\adjop{\cdot}$					& : & Representación adjunta de un elemento del álgebra de Lie.
+		\\
+		$\adjhat{\left( \cdot \right)}$	& : & Representación adjunta de un elemento del espacio euclideano asociado al álgebra de Lie.
+		\\
+		$\adjvee{\left( \cdot \right)}$	& : & Operador que convierte un elemento de la representación adjunta de vuelta espacio euclideano asociado.
+		\\
+	\end{tabular} 
+	%\end{tabulary} 
+\end{center}
+\end{notation}
+

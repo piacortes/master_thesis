@@ -1,0 +1,161 @@
+\documentclass[upright, contnum, oneside]{umemoria}
+\depto{DEPARTAMENTO DE ASTRONOMÍA}
+\author{PÍA GABRIELA CORTÉS ZULETA}
+\title{THE TRAMOS PROJECT UPDATED: ENHANCED SAMPLE OF TRANSITING EXOPLANETS, STRATEGIES, AND ANALYSIS}
+\titulo{THE TRAMOS PROJECT UPDATED: ENHANCED SAMPLE OF TRANSITING EXOPLANETS, STRATEGIES AND ANALYSIS}
+
+\date{2019}
+\fecha{2019}
+\guia{PATRICIO ROJO RUBKE}
+
+\carrera{MAGÍSTER EN CIENCIAS MENCIÓN ASTRONOMÍA}
+\memoria{TESIS PARA OPTAR AL GRADO DE}
+\comision{}
+
+% ----------------------------------------------------------------------
+% Configuracion temporal
+% ----------------------------------------------------------------------
+%\usepackage{minted}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage{physics}
+
+\input{definitions.tex}
+
+
+% anexos
+% arreglo de: https://tex.stackexchange.com/a/260486
+\usepackage{etoolbox}
+\usepackage[toc]{appendix}
+\makeatletter
+\appto{\appendices}{\def\Hy@chapapp{Appendix}}
+\makeatother
+
+\usepackage{stackengine}
+
+\usepackage{tabulary}
+
+\renewcommand{\appendixtocname}{Apéndices}
+\renewcommand{\appendixpagename}{Apéndices}
+
+% configuracion de captions
+\captionsetup{font=small}
+\captionsetup[sub]{font=small}
+
+\usepackage{amssymb}% http://ctan.org/pkg/amssymb
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+
+% tabla con nota abajo
+\usepackage[flushleft]{threeparttable} % http://ctan.org/pkg/threeparttable
+% permite ajustar el tamaño de tablas y otros objetos
+\usepackage{adjustbox}
+
+% tabla de contenidos por capitulo
+%\usepackage{minitoc}
+
+% para incluir paginas adicionales con algun objeto
+\usepackage{afterpage}
+\usepackage{pdflscape}
+
+% subcaptions
+\usepackage{subcaption}
+\usepackage{caption}
+
+% alignment of vectors and matrices
+\usepackage{mathtools}
+
+\begin{document}
+
+% ----------------------------------------------------------------------
+% Portada
+% ----------------------------------------------------------------------
+\frontmatter
+\maketitle
+
+% TODO list
+%\todototoc
+%\listoftodos
+
+
+% ----------------------------------------------------------------------
+% Resumen
+% ----------------------------------------------------------------------
+\input{abstract.tex}
+
+% ----------------------------------------------------------------------
+% Dedicatoria
+% ----------------------------------------------------------------------
+%\input{dedicatoria.tex}
+
+% ----------------------------------------------------------------------
+% Agradecimientos
+% ----------------------------------------------------------------------
+%\input{agradecimientos.tex}
+%\addcontentsline{toc}{chapter}{Agradecimientos}
+%\cleardoublepage
+
+% ----------------------------------------------------------------------
+% Índice, tablas y figuras
+% ----------------------------------------------------------------------
+\cleardoublepage
+\tableofcontents
+
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Índice de Tablas}
+\listoftables
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Índice de Ilustraciones}
+\listoffigures
+
+
+%\input{acronimos.tex}
+\addcontentsline{toc}{chapter}{Acrónimos}
+
+%\input{notacion.tex}
+\addcontentsline{toc}{chapter}{Notación}
+% ----------------------------------------------------------------------
+% Contenidos
+% ----------------------------------------------------------------------
+
+\mainmatter
+
+% Cuerpo
+%\input{chap_introduccion.tex}		% Introduccion
+%\input{chap_teoria.tex}		% Marco teórico
+%\input{chap_nao_backpack.tex}% Sistema General
+%\input{chap_slam_visual.tex}	% Sistema General
+%\input{chap_odometria.tex}	% Sistema General
+%\input{chap_resultados.tex}	% Resultados
+%\input{chap_conclusiones.tex}% Conclusiones
+
+% ----------------------------------------------------------------------
+% Glosario
+% ----------------------------------------------------------------------
+%\input{glosario.tex} % opcional
+
+% ----------------------------------------------------------------------
+% Bibliografía
+% ----------------------------------------------------------------------
+
+\addcontentsline{toc}{chapter}{Bibliografía}
+\bibliographystyle{plain}
+{\small
+\bibliography{bibliografia}
+}
+
+% ----------------------------------------------------------------------
+% Apéndice
+% ----------------------------------------------------------------------
+
+\begin{appendices}
+%\input{apendice_nao_datasheet.tex} 	     % especificaciones del NAO
+%\input{apendice_setup_experimental.tex}  % setup experimental
+%\input{apendice_lie.tex} 	             % grupos de Lie
+%\input{apendice_intentos.tex}	         % Lo que se intentó y no funcionó
+%\input{apendice_imu.tex}	             % derivacion de modelo cinemático de la IMU
+%\input{apendice_agradecimientos.tex}	 % agradecimientos
+\end{appendices}
+
+\end{document}
+\grid
