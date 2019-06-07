@@ -60,7 +60,7 @@
 \RequirePackage{graphicx}
 
 % Lenguaje
-\RequirePackage[spanish, es-nolists, es-lcroman,es-nodecimaldot]{babel} % Lenguaje
+%\RequirePackage[spanish, es-nolists, es-lcroman,es-nodecimaldot]{babel} % Lenguaje
 
 % Referencias cruzadas
 \RequirePackage[pdfpagelabels,
@@ -125,10 +125,10 @@
 %%----------------------------------------------------------------------------------------------
 
 %% Redefinicion de titulos de secciones
-\addto\captionsspanish{\renewcommand\tablename{Tabla}}
-\addto\captionsspanish{\renewcommand\contentsname{Tabla de Contenido}}
-\addto\captionsspanish{\renewcommand\listtablename{Índice de Tablas}}
-\addto\captionsspanish{\renewcommand\listfigurename{Índice de Ilustraciones}}
+%\addto\captionsspanish{\renewcommand\tablename{Tabla}}
+%\addto\captionsspanish{\renewcommand\contentsname{Contents}}
+%\addto\captionsspanish{\renewcommand\listtablename{List of Tables}}
+%\addto\captionsspanish{\renewcommand\listfigurename{List of Figures}}
 
 %% Renovar enumerate e itemize
 \let\oldenum\enumerate

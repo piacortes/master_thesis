@@ -84,14 +84,14 @@
 % ----------------------------------------------------------------------
 % Dedicatoria
 % ----------------------------------------------------------------------
-%\input{dedicatoria.tex}
+\input{dedicatoria.tex}
 
 % ----------------------------------------------------------------------
 % Agradecimientos
 % ----------------------------------------------------------------------
-%\input{agradecimientos.tex}
-%\addcontentsline{toc}{chapter}{Agradecimientos}
-%\cleardoublepage
+\input{agradecimientos.tex}
+\addcontentsline{toc}{chapter}{Agradecimientos}
+\cleardoublepage
 
 % ----------------------------------------------------------------------
 % Índice, tablas y figuras
@@ -101,19 +101,19 @@
 
 
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Índice de Tablas}
+\addcontentsline{toc}{chapter}{List of Tables}
 \listoftables
 
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Índice de Ilustraciones}
+\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
 
 
 %\input{acronimos.tex}
-\addcontentsline{toc}{chapter}{Acrónimos}
+%\addcontentsline{toc}{chapter}{Acrónimos}
 
 %\input{notacion.tex}
-\addcontentsline{toc}{chapter}{Notación}
+%\addcontentsline{toc}{chapter}{Notación}
 % ----------------------------------------------------------------------
 % Contenidos
 % ----------------------------------------------------------------------
@@ -121,7 +121,7 @@
 \mainmatter
 
 % Cuerpo
-%\input{chap_introduccion.tex}		% Introduccion
+\input{introduction.tex}		% Introduccion
 %\input{chap_teoria.tex}		% Marco teórico
 %\input{chap_nao_backpack.tex}% Sistema General
 %\input{chap_slam_visual.tex}	% Sistema General
@@ -138,7 +138,7 @@
 % Bibliografía
 % ----------------------------------------------------------------------
 
-\addcontentsline{toc}{chapter}{Bibliografía}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{plain}
 {\small
 \bibliography{bibliografia}
@@ -148,14 +148,14 @@
 % Apéndice
 % ----------------------------------------------------------------------
 
-\begin{appendices}
+%\begin{appendices}
 %\input{apendice_nao_datasheet.tex} 	     % especificaciones del NAO
 %\input{apendice_setup_experimental.tex}  % setup experimental
 %\input{apendice_lie.tex} 	             % grupos de Lie
 %\input{apendice_intentos.tex}	         % Lo que se intentó y no funcionó
 %\input{apendice_imu.tex}	             % derivacion de modelo cinemático de la IMU
 %\input{apendice_agradecimientos.tex}	 % agradecimientos
-\end{appendices}
+%\end{appendices}
 
 \end{document}
 \grid
