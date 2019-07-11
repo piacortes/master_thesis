@@ -71,11 +71,11 @@
 
 \backrefspanish
 \renewcommand*{\backref}[1]{}
-\renewcommand*{\backrefalt}[4]{%
-	\ifcase #1 (No citado.)%
-	\or        (Citado en pag.~#2.)%
-	\else      (Citado en pag.~#2.)%
-	\fi}
+%\renewcommand*{\backrefalt}[4]{%
+%	\ifcase #1 (No citado.)%
+%	\or        (Citado en pag.~#2.)%
+%	\else      (Citado en pag.~#2.)%
+%	\fi}
 
 % Codigo fuente
 \RequirePackage{listings} % Codigo Fuente
@@ -384,3 +384,80 @@
 
 % Estilo de listas
 \renewcommand{\labelitemi}{\tiny$\blacksquare$}
+
+
+\newcommand*\aap{A\&A}
+\let\astap=\aap
+\newcommand*\aapr{A\&A~Rev.}
+\newcommand*\aaps{A\&AS}
+\newcommand*\actaa{Acta Astron.}
+\newcommand*\aj{AJ}
+\newcommand*\ao{Appl.~Opt.}
+\let\applopt\ao
+\newcommand*\apj{ApJ}
+\newcommand*\apjl{ApJ}
+\let\apjlett\apjl
+\newcommand*\apjs{ApJS}
+\let\apjsupp\apjs
+\newcommand*\aplett{Astrophys.~Lett.}
+\newcommand*\apspr{Astrophys.~Space~Phys.~Res.}
+\newcommand*\apss{Ap\&SS}
+\newcommand*\araa{ARA\&A}
+\newcommand*\azh{AZh}
+\newcommand*\baas{BAAS}
+\newcommand*\bac{Bull. astr. Inst. Czechosl.}
+\newcommand*\bain{Bull.~Astron.~Inst.~Netherlands}
+\newcommand*\caa{Chinese Astron. Astrophys.}
+\newcommand*\cjaa{Chinese J. Astron. Astrophys.}
+\newcommand*\fcp{Fund.~Cosmic~Phys.}
+\newcommand*\gca{Geochim.~Cosmochim.~Acta}
+\newcommand*\grl{Geophys.~Res.~Lett.}
+\newcommand*\iaucirc{IAU~Circ.}
+\newcommand*\icarus{Icarus}
+\newcommand*\jcap{J. Cosmology Astropart. Phys.}
+\newcommand*\jcp{J.~Chem.~Phys.}
+\newcommand*\jgr{J.~Geophys.~Res.}
+\newcommand*\jqsrt{J.~Quant.~Spec.~Radiat.~Transf.}
+\newcommand*\jrasc{JRASC}
+\newcommand*\memras{MmRAS}
+\newcommand*\memsai{Mem.~Soc.~Astron.~Italiana}
+\newcommand*\mnras{MNRAS}
+\newcommand*\na{New A}
+\newcommand*\nar{New A Rev.}
+\newcommand*\nat{Nature}
+\newcommand*\nphysa{Nucl.~Phys.~A}
+\newcommand*\pasa{PASA}
+\newcommand*\pasj{PASJ}
+\newcommand*\pasp{PASP}
+\newcommand*\physrep{Phys.~Rep.}
+\newcommand*\physscr{Phys.~Scr}
+\newcommand*\planss{Planet.~Space~Sci.}
+\newcommand*\pra{Phys.~Rev.~A}
+\newcommand*\prb{Phys.~Rev.~B}
+\newcommand*\prc{Phys.~Rev.~C}
+\newcommand*\prd{Phys.~Rev.~D}
+\newcommand*\pre{Phys.~Rev.~E}
+\newcommand*\prl{Phys.~Rev.~Lett.}
+\newcommand*\procspie{Proc.~SPIE}
+\newcommand*\qjras{QJRAS}
+\newcommand*\rmxaa{Rev. Mexicana Astron. Astrofis.}
+\newcommand*\skytel{S\&T}
+\newcommand*\solphys{Sol.~Phys.}
+\newcommand*\sovast{Soviet~Ast.}
+\newcommand*\ssr{Space~Sci.~Rev.}
+\newcommand*\zap{ZAp}
+
+\providecommand{\bjdtdb}{\ensuremath{\rm {BJD_{TDB}}}}
+\providecommand{\feh}{\ensuremath{\left[{\rm Fe}/{\rm H}\right]}}
+\providecommand{\teff}{\ensuremath{T_{\rm eff}}}
+\providecommand{\ecosw}{\ensuremath{e\cos{\omega_*}}}
+\providecommand{\esinw}{\ensuremath{e\sin{\omega_*}}}
+\providecommand{\msun}{\ensuremath{\,M_\Sun}}
+\providecommand{\rsun}{\ensuremath{\,R_\Sun}}
+\providecommand{\lsun}{\ensuremath{\,L_\Sun}}
+\providecommand{\mj}{\ensuremath{\,M_{\rm J}}}
+\providecommand{\rj}{\ensuremath{\,R_{\rm J}}}
+\providecommand{\me}{\ensuremath{\,M_{\rm E}}}
+\providecommand{\re}{\ensuremath{\,R_{\rm E}}}
+\providecommand{\fave}{\langle F \rangle}
+\providecommand{\fluxcgs}{10$^9$ erg s$^{-1}$ cm$^{-2}$}
