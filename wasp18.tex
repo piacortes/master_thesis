@@ -47,73 +47,79 @@ For the radial velocity parameters, the RV semi-amplitude derived from our analy
 % Derived params
 Finally, the derived parameters of the system are, in general, in good agreement with the values from \cite{Hellier2009} and \cite{Shporer2018}. 
 
-\begin{table*}
+
+
+\begin{landscape}
+\begin{longtable}{llccc}
 \caption{System parameter of WASP-18}
 \label{wasp18}
 \centering
-\begin{tabular}{lcccc}
-\hline \hline
-~~~~Parameter & Units & This work & \cite{Hellier2009} & \cite{Shporer2018} \\
+\tabularnewline
+\hline 
+Parameter & Units & This work & \cite{Hellier2009} & \cite{Shporer2018} \\
 \hline
 \smallskip\\\multicolumn{2}{l}{Stellar Parameters:}&\smallskip\\
-~~~~$M_*$\dotfill &Mass (\(M_\odot\))\dotfill &$1.294^{+0.063}_{-0.061}$ & $1.25\pm0.13$ &  \\
-~~~~$R_*$\dotfill &Radius (\(R_\odot\))\dotfill &$1.319^{+0.061}_{-0.062}$ &$1.26^{+0.067}_{-0.054}$ & \\
-~~~~$L_*$\dotfill &Luminosity (\(L_\odot\))\dotfill &$2.68^{+0.28}_{-0.26}$ & &\\
-~~~~$\rho_*$\dotfill &Density (cgs)\dotfill &$0.795^{+0.11}_{-0.089}$ & $ 0.707^{+0.056}_{-0.096}$&\\
-~~~~$\log{g}$\dotfill & Surface gravity (cgs)\dotfill &$4.310^{+0.036}_{-0.033}$ &$4.367^{+0.028}_{-0.042}$ & \\
-~~~~$T_{\rm eff}$\dotfill &Effective Temperature (K)\dotfill &$6432\pm48$ & $6400\pm100$& \\
-~~~~$[{\rm Fe/H}]$\dotfill &Metallicity \dotfill &$0.107\pm0.080$ & $0.00\pm0.09$ & \\
-~~~~$Age$\dotfill &Age (Gyr)\dotfill &$1.57^{+1.4}_{-0.94}$ & $0.5-1.5$ & \\
-%~~~~$d$\dotfill &Distance (pc)\dotfill &$122.2^{+9.9}_{-8.2}$ & $100\pm10$ & \\
+~~~~$M_*$  &Mass (\(M_\odot\))  &$1.294^{+0.063}_{-0.061}$ & $1.25\pm0.13$ &  \\
+~~~~$R_*$  &Radius (\(R_\odot\))  &$1.319^{+0.061}_{-0.062}$ &$1.26^{+0.067}_{-0.054}$ & \\
+~~~~$L_*$  &Luminosity (\(L_\odot\))  &$2.68^{+0.28}_{-0.26}$ & &\\
+~~~~$\rho_*$  &Density (cgs)  &$0.795^{+0.11}_{-0.089}$ & $ 0.707^{+0.056}_{-0.096}$&\\
+~~~~$\log{g}$  & Surface gravity (cgs)  &$4.310^{+0.036}_{-0.033}$ &$4.367^{+0.028}_{-0.042}$ & \\
+~~~~$T_{\rm eff}$  &Effective Temperature (K)  &$6432\pm48$ & $6400\pm100$& \\
+~~~~$[{\rm Fe/H}]$  &Metallicity   &$0.107\pm0.080$ & $0.00\pm0.09$ & \\
+~~~~$Age$  &Age (Gyr)  &$1.57^{+1.4}_{-0.94}$ & $0.5-1.5$ & \\
+%~~~~$d$  &Distance (pc)  &$122.2^{+9.9}_{-8.2}$ & $100\pm10$ & \\
 
 \smallskip\\\multicolumn{2}{l}{Planetary Parameters:}&\smallskip\\
-~~~~$R_P$\dotfill &Radius (\rj)\dotfill &$1.310\pm0.071$ & $1.106^{+0.072}_{-0.054}$& $1.192\pm0.038$\\
-~~~~$M_P$\dotfill &Mass (\mj)\dotfill &$10.48^{+0.42}_{-0.40}$ & $10.30\pm0.69$ & \\
-~~~~$P$\dotfill &Period (days)\dotfill &$0.94145236\pm(49)$ & $0.94145299\pm(87)$& $0.9414576^{(+34)}_{(-35)}$ \\
-~~~~$e$\dotfill &Eccentricity \dotfill &$0.0061^{+0.0089}_{-0.0044}$ & &\\
-~~~~$a$\dotfill &Semi-major axis (AU)\dotfill &$0.02054^{+0.00033}_{-0.00032}$ & $0.02045\pm0.00067$&\\
-~~~~$\omega_*$\dotfill &Argument of Periastron (Degrees)\dotfill &$-100^{+110}_{-120}$ &  &\\
-~~~~$\rho_P$\dotfill &Density (cgs)\dotfill &$5.79^{+0.97}_{-0.78}$& $7.73^{+0.78}_{-1.27}$\footnotemark{b} & \\
-~~~~$logg_P$\dotfill &Surface gravity \dotfill &$4.180^{+0.044}_{-0.041}$ & $4.289^{+0.027}_{-0.050}$ &\\
-~~~~$T_{eq}$\dotfill &Equilibrium temperature (K)\dotfill &$2485^{+53}_{-56}$ & $2384^{+58}_{-30}$ & \\
-~~~~$\Theta$\dotfill &Safronov Number \dotfill &$0.254^{+0.015}_{-0.014}$ & &\\
-~~~~$\fave$\dotfill &Incident Flux (\fluxcgs)\dotfill &$8.66^{+0.77}_{-0.75}$ & & \\
+~~~~$R_P$  &Radius (\rj)  &$1.310\pm0.071$ & $1.106^{+0.072}_{-0.054}$& $1.192\pm0.038$\\
+~~~~$M_P$  &Mass (\mj)  &$10.48^{+0.42}_{-0.40}$ & $10.30\pm0.69$ & \\
+~~~~$P$  &Period (days)  &$0.94145236\pm(49)$ & $0.94145299\pm(87)$& $0.9414576^{(+34)}_{(-35)}$ \\
+~~~~$e$  &Eccentricity   &$0.0061^{+0.0089}_{-0.0044}$ & &\\
+~~~~$a$  &Semi-major axis (AU)  &$0.02054^{+0.00033}_{-0.00032}$ & $0.02045\pm0.00067$&\\
+~~~~$\omega_*$  &Argument of Periastron (Degrees)  &$-100^{+110}_{-120}$ &  &\\
+~~~~$\rho_P$  &Density (cgs)  &$5.79^{+0.97}_{-0.78}$& $7.73^{+0.78}_{-1.27}$\footnotemark{b} & \\
+~~~~$logg_P$  &Surface gravity   &$4.180^{+0.044}_{-0.041}$ & $4.289^{+0.027}_{-0.050}$ &\\
+~~~~$T_{eq}$  &Equilibrium temperature (K)  &$2485^{+53}_{-56}$ & $2384^{+58}_{-30}$ & \\
+~~~~$\Theta$  &Safronov Number   &$0.254^{+0.015}_{-0.014}$ & &\\
+~~~~$\fave$  &Incident Flux (\fluxcgs)  &$8.66^{+0.77}_{-0.75}$ & & \\
 
 \smallskip\\\multicolumn{2}{l}{Primary Transit Parameters:}&\smallskip\\
-~~~~$T_0$\dotfill &Transit time (\bjdtdb)\dotfill &$2456740.80560\pm(19)$ & $2454221.48163\pm(38)$ & $2458361.048072^{(+34)}_{(-35)}$\\
-~~~~$i$\dotfill &Inclination (Degrees)\dotfill &$83.5^{+2.0}_{-1.6}$ & $86.0\pm2.5$ & $84.31^{+0.40}_{-0.37}$\\
-~~~~$R_P/R_*$\dotfill &Radius of planet in stellar radii \dotfill &$0.1021\pm0.0011$ &  $0.0935\pm0.0011$ & $0.09721^{+0.00016}_{-0.00017}$\\
-~~~~$a/R_*$\dotfill &Semi-major axis in stellar radii \dotfill &$3.35^{+0.15}_{-0.13}$ & & $3.523^{+0.028}_{-0.027}$\\
-~~~~$b$\dotfill &Impact parameter \dotfill &$0.433^{+0.07}_{-0.10}$ & $0.25\pm0.15$ & $0.349^{+0.020}_{-0.022}$\\
-~~~~$\delta$\dotfill &Transit depth (fraction)\dotfill &$0.01041\pm0.00022$ & & $0.009449^{+0.000032}_{-0.000032}$\\
-~~~~$u_{1,I}$\dotfill &linear LD coeff., I band\dotfill &$0.207\pm0.019$ & &\\
-~~~~$u_{2,I}$\dotfill &quadratic LD coeff., I band\dotfill &$0.313\pm0.019$& &\\
-~~~~$u_{1,R}$\dotfill &linear LD coeff., R band\dotfill & $0.257\pm0.045$ & &\\
-~~~~$u_{2,R}$\dotfill &quadratic LD coeff., R band\dotfill &$0.309\pm0.048$ & &\\
-~~~~$T_{14}$\dotfill &Total transit duration (days)\dotfill &$0.0931^{+0.0011}_{-0.0010}$ & $0.08932\pm0.00068$ &\\
-~~~~$P_T$\dotfill &A priori non-grazing transit prob \dotfill &$0.268^{+0.011}_{-0.012}$ & &\\
-~~~~$P_{T,G}$\dotfill &A priori transit prob \dotfill &$0.328^{+0.014}_{-0.015}$ & &\\
-~~~~$\tau$\dotfill &Ingress/egress transit duration (days)\dotfill &$0.0107\pm0.0010$ & &\\
+~~~~$T_0$  &Transit time (\bjdtdb)  &$2456740.80560\pm(19)$ & $2454221.48163\pm(38)$ & $2458361.048072^{(+34)}_{(-35)}$\\
+~~~~$i$  &Inclination (Degrees)  &$83.5^{+2.0}_{-1.6}$ & $86.0\pm2.5$ & $84.31^{+0.40}_{-0.37}$\\
+~~~~$R_P/R_*$  &Radius of planet in stellar radii   &$0.1021\pm0.0011$ &  $0.0935\pm0.0011$ & $0.09721^{+0.00016}_{-0.00017}$\\
+~~~~$a/R_*$  &Semi-major axis in stellar radii   &$3.35^{+0.15}_{-0.13}$ & & $3.523^{+0.028}_{-0.027}$\\
+~~~~$b$  &Impact parameter   &$0.433^{+0.07}_{-0.10}$ & $0.25\pm0.15$ & $0.349^{+0.020}_{-0.022}$\\
+~~~~$\delta$  &Transit depth (fraction)  &$0.01041\pm0.00022$ & & $0.009449^{+0.000032}_{-0.000032}$\\
+~~~~$u_{1,I}$  &linear LD coeff., I band  &$0.207\pm0.019$ & &\\
+~~~~$u_{2,I}$  &quadratic LD coeff., I band  &$0.313\pm0.019$& &\\
+~~~~$u_{1,R}$  &linear LD coeff., R band  & $0.257\pm0.045$ & &\\
+~~~~$u_{2,R}$  &quadratic LD coeff., R band  &$0.309\pm0.048$ & &\\
+~~~~$T_{14}$  &Total transit duration (days)  &$0.0931^{+0.0011}_{-0.0010}$ & $0.08932\pm0.00068$ &\\
+~~~~$P_T$  &A priori non-grazing transit prob   &$0.268^{+0.011}_{-0.012}$ & &\\
+~~~~$P_{T,G}$  &A priori transit prob   &$0.328^{+0.014}_{-0.015}$ & &\\
+~~~~$\tau$  &Ingress/egress transit duration (days)  &$0.0107\pm0.0010$ & &\\
 
 \smallskip\\\multicolumn{2}{l}{RV Parameters:}&\smallskip\\
-~~~~$ecos{\omega_*}$\dotfill & \dotfill &$-0.0004^{+0.0038}_{-0.0045}$ & &\\
-~~~~$esin{\omega_*}$\dotfill & \dotfill &$-0.0008^{+0.0056}_{-0.0092}$ & &\\
-~~~~$K$\dotfill &RV semi-amplitude (m/s)\dotfill &$1807^{+34}_{-36}$ & $1818.3\pm8.0$ &\\
-~~~~$M_P\sin i$\dotfill &Minimum mass (\mj)\dotfill &$10.40\pm0.40$ & &\\
+~~~~$ecos{\omega_*}$  &   &$-0.0004^{+0.0038}_{-0.0045}$ & &\\
+~~~~$esin{\omega_*}$  &   &$-0.0008^{+0.0056}_{-0.0092}$ & &\\
+~~~~$K$  &RV semi-amplitude (m/s)  &$1807^{+34}_{-36}$ & $1818.3\pm8.0$ &\\
+~~~~$M_P\sin i$  &Minimum mass (\mj)  &$10.40\pm0.40$ & &\\
 \smallskip\\\multicolumn{2}{l}{Secondary Eclipse Parameters:}&\smallskip\\
-~~~~$T_S$\dotfill &Time of eclipse (\bjdtdb)\dotfill &$2457657.3076^{+0.0023}_{-0.0027}$ & &\\
-~~~~$b_S$\dotfill &Eclipse impact parameter \dotfill &$0.431^{+0.070}_{-0.100}$ & &\\
-~~~~$\tau_S$\dotfill &Ingress/egress eclipse duration (days)\dotfill &$0.0106^{+0.0011}_{-0.0010}$ & &\\
-~~~~$T_{S,14}$\dotfill &Total eclipse duration (days)\dotfill &$0.0929\pm0.0017$ & &\\
-~~~~$P_S$\dotfill &A priori non-grazing eclipse prob \dotfill &$0.269^{+0.010}_{-0.011}$ & &\\
-~~~~$P_{S,G}$\dotfill &A priori eclipse prob \dotfill &$0.330^{+0.013}_{-0.014}$ & &\\
-\hline
-\end{tabular}
+~~~~$T_S$  &Time of eclipse (\bjdtdb)  &$2457657.3076^{+0.0023}_{-0.0027}$ & &\\
+~~~~$b_S$  &Eclipse impact parameter   &$0.431^{+0.070}_{-0.100}$ & &\\
+~~~~$\tau_S$  &Ingress/egress eclipse duration (days)  &$0.0106^{+0.0011}_{-0.0010}$ & &\\
+~~~~$T_{S,14}$  &Total eclipse duration (days)  &$0.0929\pm0.0017$ & &\\
+~~~~$P_S$  &A priori non-grazing eclipse prob   &$0.269^{+0.010}_{-0.011}$ & &\\
+~~~~$P_{S,G}$  &A priori eclipse prob   &$0.330^{+0.013}_{-0.014}$ & &\\
+\hline 
+\end{longtable}
+\end{landscape}
 %\tablefoot{
 %\tablefoottext{a}{Value converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.}
 %\tablefoottext{b}{Value converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs.}
 %\tablefoottext{c}{Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.}}
-\end{table*}
+
+
+
 
 \section{Transit Timing Variations}\label{ttvsection}
 
@@ -142,8 +148,9 @@ The epoch $-1184$ has the greatest error in our sample because it is not a compl
 When testing the goodness of the linear fit, $\chi^{2}_{red} =0.56$, while for a second degree polynomial is $\chi^{2}_{red}=0.48$, therefore an orbital decay can be discarded in agreement with theoretical estimations \citep{CollierCameron2018}.  
 
 
-\begin{table}
+\begin{table}[H]
 %\tablewidth{0pt}
+\centering
 \caption{Transit mid-times for WASP-18b}
 \label{times_wasp18}
 \begin{tabular}{cccc}
@@ -176,7 +183,7 @@ Epoch & Transit mid-time & TTV & References\\
 %(2) \citet{Triaud2010}; (3) \citet{Maxted2013}.}
 \end{table} 
 
-\subsection{Limits on an additional perturber}
+\section{Limits on an additional perturber}
 
 For the WASP-18b system we find a large region of instability when compared to the other two systems with the boundaries at the 1:2 interior
 and 2:1 exterior mean-motion resonance. By over-plotting the RMS scatter of mid-transit times ($\rm TTV_{\rm RMS}$) for a certain value, we find
@@ -184,7 +191,7 @@ that the TTVs are relatively more sensitive at orbital architectures involving m
 
 As shown in Figure~\ref{megno_wasp18}, we find that a perturbing body of mass (upper limit) around $7-500~M_{\oplus}$ will produce an RMS of $83\,{\rm s}$ when located in the $P_2/P_1=$ 7:3, 5:2, 3:1, 17:5 and 4:1 exterior resonance. For the 1:3 interior resonance, a perturber mass (upper limit) as small as $1.9~M_{\oplus}$ could also cause a RMS mid-transit time scatter of $83\,{\rm s}$.
 
-\begin{figure}
+\begin{figure}[H]
 \includegraphics[width=1.0\columnwidth]{imagenes/WASP18_TraMos_83sec_Map001_GIMP_scaled.png}
 \caption{MEGNO ($\langle Y \rangle$) stability map for the WASP-18 system. We over-plot the map with an upper mass of a hypothetical perturbing planet introducing a mid-transit time $\rm TTV_{\rm RMS}$ scatter of $83\,{\rm s}$ (solid line) as obtained in this study. The stipulated line is the upper mass limit as obtained from the RMS scatter $(30.9\, \rm m/s)$ of the radial-velocity curve. For initial conditions resulting in a quasi-periodic (i.e bounded) motion of the system, the $\langle Y\rangle$ value is close to 2.0 (color coded blue). For chaotic (i.e unstable) motion, the $\langle Y \rangle$ is diverging away from 2.0 (color coded red to yellow). Vertical arrows indicate $(P_2/P_1)$ orbital resonances between the perturbing body and the transiting planet. The two planets were assumed to be co-planar, and the perturbing planet's eccentricity was initially set to zero.
 \emph{See electronic version for colors}.}
