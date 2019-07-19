@@ -5,7 +5,7 @@ WASP-18b is a transiting hot Jupiter discovered by \cite{Hellier2009} within the
 
 \section{Observations and Data Reduction}
 
-\begin{table}
+\begin{table*}
 \caption{Log of Observations}             
 \label{log_table}      
 \centering          
@@ -28,7 +28,7 @@ WASP-18b is a transiting hot Jupiter discovered by \cite{Hellier2009} within the
 \footnotetext{b}{For the variable exposure times, we consider the average during the night.}
 \footnotetext{c}{The RMS values were computed from the best fitted model of each light curve.}
 \footnotetext{d}{Light curves obtained with only one reference star.}
-\end{table}
+\end{table*}
 
 
 \section{Transit Parameters and Physical Properties}\label{transitparams}
@@ -174,4 +174,19 @@ Epoch & Transit mid-time & TTV & References\\
 \end{tabular}
 %\tablebib{(1)~\citet{Hellier2009};
 %(2) \citet{Triaud2010}; (3) \citet{Maxted2013}.}
-\end{table}     
+\end{table} 
+
+\subsection{Limits on an additional perturber}
+
+For the WASP-18b system we find a large region of instability when compared to the other two systems with the boundaries at the 1:2 interior
+and 2:1 exterior mean-motion resonance. By over-plotting the RMS scatter of mid-transit times ($\rm TTV_{\rm RMS}$) for a certain value, we find
+that the TTVs are relatively more sensitive at orbital architectures involving mean-motion resonances confirming the results by \citet{Agol2005} and \citet{Holman2005}. %This also applies to WASP-19 and WASP-77A.
+
+As shown in Figure~\ref{megno_wasp18}, we find that a perturbing body of mass (upper limit) around $7-500~M_{\oplus}$ will produce an RMS of $83\,{\rm s}$ when located in the $P_2/P_1=$ 7:3, 5:2, 3:1, 17:5 and 4:1 exterior resonance. For the 1:3 interior resonance, a perturber mass (upper limit) as small as $1.9~M_{\oplus}$ could also cause a RMS mid-transit time scatter of $83\,{\rm s}$.
+
+\begin{figure}
+\includegraphics[width=1.0\columnwidth]{imagenes/WASP18_TraMos_83sec_Map001_GIMP_scaled.png}
+\caption{MEGNO ($\langle Y \rangle$) stability map for the WASP-18 system. We over-plot the map with an upper mass of a hypothetical perturbing planet introducing a mid-transit time $\rm TTV_{\rm RMS}$ scatter of $83\,{\rm s}$ (solid line) as obtained in this study. The stipulated line is the upper mass limit as obtained from the RMS scatter $(30.9\, \rm m/s)$ of the radial-velocity curve. For initial conditions resulting in a quasi-periodic (i.e bounded) motion of the system, the $\langle Y\rangle$ value is close to 2.0 (color coded blue). For chaotic (i.e unstable) motion, the $\langle Y \rangle$ is diverging away from 2.0 (color coded red to yellow). Vertical arrows indicate $(P_2/P_1)$ orbital resonances between the perturbing body and the transiting planet. The two planets were assumed to be co-planar, and the perturbing planet's eccentricity was initially set to zero.
+\emph{See electronic version for colors}.}
+\label{megno_wasp18}
+\end{figure}
