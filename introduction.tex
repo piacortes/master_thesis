@@ -1,26 +1,63 @@
 \chapter{Introduction}\label{chap:intro}
-The existence of planets orbiting other stars different from our Sun, lived in the human imagination for centuries. During the sixteenth century, the Italian philosopher Giordano Bruno suggested, for the first time in history, that more planet could be outside the Solar System. Even though the first claims of exoplanet detection began at the end of the nineteenth century, it was not until more than four hundred years after the statement of Giordano Bruno, that the first exoplanet was confirmed in 1992. Surprisingly it was not just one exoplanet but three, orbiting the pulsar PSR B1257+12 more than 1000 light-years away from us. Today, more than 4,000 exoplanet are confirmed, and thousands more are waiting for their confirmation.
+The existence of planets orbiting other stars different from our Sun, lived in the human imagination for centuries. During the sixteenth century, the Italian philosopher Giordano Bruno suggested, for the first time in history, that more planet could be outside the Solar System. Even though the first claims of exoplanet detection began at the end of the nineteenth century, it was not until more than four hundred years after the statement of Giordano Bruno, that the first exoplanet was confirmed in 1992. Surprisingly, it was not just one exoplanet but three, orbiting the pulsar PSR B1257+12 more than 1000 light-years away from us. Today, more than 4,000 exoplanet are confirmed, and thousands more are waiting for their confirmation.
 
-The increasing number of discovered exoplanets have been reach thanks to two techniques: Radial Velocity and Transits. Each one of these techniques had their own advantages depending on the physical properties of the planetary system. When the orbit of the exoplanet is aligned with the line of sight from Earth, the pass of the planet in front of its host star, the star's flux decreases proportionally to the size of the planet. Thus, its radius, in comparison with the radius of the star, can be determined directly using the Transit method. In the other hand, the gravity due to the presence of a planet will set the center of mass of the system, in a place different from the star's center. Therefore, the star will move in its own small orbit with a size proportional to the mass of the planet. In this case, the planet's minimum mass ($M_{p}\cdot \sin i$) can be determined. The perfect scenario comes when both method can be use in the same planetary system, allowing to derived essential properties as the real mass and the mean density of the planet.
+The increasing number of discovered exoplanets have been reached thank to two techniques: Radial Velocity and Transits. Each one of these techniques had their own advantages depending on the physical properties of the planetary system. When the orbit of the exoplanet is aligned with the line of sight from Earth, the pass of the planet in front of its host star causes that the star's flux decreases proportionally to the size of the planet. Thus, its radius, in comparison with the radius of the star, can be determined directly using the Transit method. In the other hand, the gravity due to the presence of a planet will set the center of mass of the system, in a place different from the star's center. Therefore, the star will move in its own small orbit with a size proportional to the mass of the planet. In this case, the Radial Velocity method unveils the planet's minimum mass ($M_{p}\sin i$). The perfect scenario comes when both methods can be used in the same planetary system, allowing to derive essential properties such as the real mass and the mean density of the planet.
 
 
 \section{Transiting Exoplanets}
-The Transit method is today the most successful technique to discover extrasolar planets. The Kepler mission was launched in 2009 and during its almost nine years of 
+The Transit method is today the most successful technique to discover extrasolar planets (see Fig.~\ref{amount_exoplanet}). The Kepler mission was launched in 2009 and during its almost nine years of provided thousands of discoveries due to this method.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\columnwidth]{imagenes/exo_dischist_cumulative.png}
+\caption{Accumulative number of discovered exoplanets by year.}
+\label{amount_exoplanet}
+\end{figure}
+
+The light curve produced by a transit event provides important information of the planetary system. For example, it is the only way on which we can derived directly the proportion between the exoplanet's and star's radii. It can also give information about the impact parameter, and therefore, the inclination of the orbit. 
+
+In Figure~\ref{transit} is described the architecture of a transiting exoplanet. When the planet passes in front of its star produced a dimming in its flux called primary transit. The maximum drop during the transit event defines the transit depth $\Delta{F}$:
+
+\begin{equation}
+    \Delta{F} = \left(\frac{R_{p}}{R_{*}}\right)^2 
+\end{equation}
+
+Where $R_{p}$ and $R_{*}$ are the planet and star radius, respectively. The numbers 1, 2, 3 and 4 correspond to the contact times: $t_{1}$, $t_{2}$, $t_{3}$ and $t_{4}$. The total duration of the transit is $t_{T} = t_{4}-t_{1}$ and the full duration is $t_{F}=t_{3}-t_{2}$. The total duration of the transit can be also described considering planetary parameters such as the period $P$, semi-major axis $a$ and orbital inclination $i$:
+
+\begin{equation}
+    t_{T} = \frac{PR_{star}}{\pi a} \sqrt{\left(1+\frac{R_{p}}{R_{*}}\right)^2-\left(\frac{a\cos i}{R_{*}}\right)}
+\end{equation}
+
+The impact parameter $b$, is the sky-projected distance between the center of the star and the planet at conjunction:
+
+\begin{equation}
+    b = \frac{a\cos{i}}{R_{*}}\left(\frac{1-e^2}{1+e\sin{\omega}}\right)
+\label{impact_param}
+\end{equation}
+
+Where $\omega$ is the periastron longitude. In the case of circular orbits, the eccentricity is zero, thus Eq.~\ref{impact_param} is simplified to:
+
+\begin{equation}
+    b = \frac{a\cos{i}}{R_{*}}
+\label{impact_param_simple}
+\end{equation}
+
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.8\columnwidth]{imagenes/transit.png}
-\caption{Architecture of a transiting exoplanet.}
+\caption{Architecture of a transiting exoplanet and the observed light curve. Based on the light curve itself it is possible to measure the transit depth $\Delta F$, the impact parameter $b$. From them, the planet-to-star radius ratio $R_{p}/R_{*}$ and the orbital inclination $i$ can be derived. Figure from The Handbook of Exoplanets by M. Perryman.}
 \label{transit}
 \end{figure}
 
+Depending on the orbital and physical parameters of the exoplanet, the shape of the observed light curve will vary. For example, Figure \ref{transit_examples} shows how the light curve reflects the configuration of the system. Hot Jupiters are the kind of planet easier to detect, since their planet-to-star radius ratio is larger. But an smaller planet orbiting a dwarf star could produce a similar ratio of the radius. In the other hand, exoplanets with larger orbital inclinations will produce shorter drops in the flux, in comparison with planets in the same orbital-plane with the host star.
+
 \begin{figure}[H]
-\includegraphics[width=1.0\columnwidth]{imagenes/transit_examples.png}
+\centering
+\includegraphics[width=0.8\columnwidth]{imagenes/transit_examples.png}
 \caption{Examples of transiting exoplanets and how their light curves differ between them thanks to the physical properties of the exoplanet.}
 \label{transit_examples}
 \end{figure}
 
 
-
 \section{Transit Timing Variations}
 
-\section{The Transit Monitoring in the South project}
