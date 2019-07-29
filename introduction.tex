@@ -14,7 +14,7 @@ The Transit method is today the most successful technique to discover extrasolar
 \label{amount_exoplanet}
 \end{figure}
 
-The light curve produced by a transit event provides important information of the planetary system. For example, it is the only way on which we can derived directly the proportion between the exoplanet's and star's radii. It can also give information about the impact parameter, and therefore, the inclination of the orbit. 
+The light curve produced by a transit event provides important information of the planetary system. For example, it is the only way on which we can derived directly the proportion between the exoplanet and star radius. It can also give information about the impact parameter, and therefore, the inclination of the orbit. 
 
 In Figure~\ref{transit} is described the architecture of a transiting exoplanet. Thanks to its geometry, the transit event as well as some parameters of the planetary system can be described with a few simple relations (cite Seager and Mallean y Winn).  When the planet passes in front of its star produced a dimming in its flux called primary transit. The maximum drop during the transit event defines the transit depth $\Delta{F}$:
 
@@ -63,10 +63,28 @@ TO DO: Add studies about transmission spectroscopy.
 
 \section{Transit Timing Variations}
 
-Since the discovery of the first exoplanet, one of the principal questions that arose was: are they alone in their systems? The idea of multiplanetary system is a consequence of our knowlegde about the planetary system where we live in, and until today the Solar System has the larger number of orbiting planets. Besides the Solar System, Kepler-90 has the same number of confirmed exoplanets: eight. Statistically, around a 20\% of the confirmed exoplanets live in a multiplanetary system, but this number is theoretically larger (cite). 
+Since the discovery of the first exoplanet, one of the principal questions that arose was: are they alone in their systems? The idea of multiplanetary system is a consequence of our knowledge about the planetary system where we live in, and until today the Solar System has the larger number of orbiting planets. Besides the Solar System, Kepler-90 has the same number of confirmed exoplanets: eight. Statistically, around a 20\% of the confirmed exoplanets live in a multiplanetary system, but this number is theoretically larger (cite). 
 
-The Transit Timing Variations technique was proposed as a way to detect Earth-mass planet in multiplanetary systems due to gravitational interactions \citep{Holman2005,Agol2005}. A planet in a Keplerian orbit will transit its star following a linear function of the orbital period, but the presence of a second planet could produce transits no exactly periodic. 
+The Transit Timing Variations technique was proposed as a way to detect Earth-mass planet in multiplanetary systems due to gravitational interactions \citep{Holman2005,Agol2005}. A planet in a Keplerian orbit will transit its star following a linear function of the orbital period (Eq.~\ref{linear_ephemeris}), but the presence of a second planet could produce transits no exactly periodic, thus the time between two consecutive transits varies. 
 
+\begin{equation}
+T_{c}(E) = T_{0} + E \cdot P
+\label{linear_ephemeris} 
+\end{equation}
+
+In Equation .~\ref{linear_ephemeris}, $P$ is the orbital period and $E$ is an arbitrary epoch with the corresponding transit time $T_{c}(E)$. For a given light curve (see Figure \ref{transit}), the transit time is computed as:
+
+\begin{equation}
+T_{c} = \frac{t_T}{2}
+\end{equation}
+
+The variation in time produced by the perturbing body depends on the mass and geometry of their orbits. The magnitude of the variation between successive  transit is:
+
+\begin{equation}
+\Delta t = \frac{45\pi}{16} \frac{M_2}{M_*} P_{1} \alpha^3_{e} (1-	\sqrt{2}\alpha^{3/2})^{-2}
+\end{equation}
+
+Where $\alpha_e = \frac{a_1}{a_2(1-e_2)}$, $a_1$ and $P_1$ are the semi-major axis and orbital period of the transiting exoplanet, while the perturbing planet has a mass $M_2$, semi-major axis $a_2$  and orbital period $P_2$
 
 
 
