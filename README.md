@@ -1,1 +1,1 @@
-# master_thesis
+This is the repository of the M.Sc thesis of Pía Cortés-Zuleta, title: "The TraMoS project updated: enhanced sample of transiting exoplanets, strategies and analysis".
