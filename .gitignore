@@ -7,3 +7,6 @@
 *.lot
 *.toc
 .DS_Store
+*.bbl
+*.blg
+*.brf
