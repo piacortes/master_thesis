@@ -461,3 +461,12 @@
 \providecommand{\re}{\ensuremath{\,R_{\rm E}}}
 \providecommand{\fave}{\langle F \rangle}
 \providecommand{\fluxcgs}{10$^9$ erg s$^{-1}$ cm$^{-2}$}
+
+
+
+\newcommand{\chapterauthor}[1]{%
+  {\parindent0pt\vspace*{5pt}%
+  \linespread{1.1}\normalsize\scshape#1%
+  \par\nobreak\vspace*{35pt}}
+  \@afterheading%
+}
