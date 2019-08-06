@@ -34,7 +34,7 @@ The third exoplanet we followed-up in this work, WASP-77Ab, was first presented 
 This paper is organized as follows. In Section~\ref{obs} are summarized the photometric observations and their reduction process. In Section~\ref{lc} we present the new light curves of the targets and the description of the technique used to obtain their orbital and physical parameters. The principal results and their consequences are presented in Section~\ref{res}. Finally, a summary and conclusions are described in Section~\ref{summary}.
 
 
-\section{Observations and Data Reduction}
+\section{Observations and Data Reduction}\label{obs}
 
 We collected 8 light curves for WASP-18b between 2009 and 2017, 9 light curves for WASP-19b between 2011 and 2017, and 5 light curves for WASP-77Ab between 2015 and 2017. We included 4 transits of WASP-77Ab from the Exoplanet Transit Database (ETD) in order to cover a larger timespan.
 
@@ -128,7 +128,7 @@ WASP-77Ab & 2457299.78624 & 1.00229 & 0.00028 \\
 }
 \end{table}
 
-\section{Light curve and RV analysis}
+\section{Light curve and RV analysis}\label{lc}
 
 To obtain the refined orbital and physical parameters of WASP-18b, WASP-19b, and WASP-77Ab, as well as their transit mid-time ($T_{c}$), we used EXOFASTv2 \citep{Eastman2013,Eastman2017} to model the light curves together with archived RV data \cite{Hellier2009, Hebb2010, Maxted2013}.
 
@@ -165,7 +165,7 @@ The best-fitted model is presented in Figure~\ref{transits} for our transit data
 \label{phase}
 \end{figure}
 
-\section{Results and Discussion}
+\section{Results and Discussion}\label{res}
 
 \subsection{Transit Parameters and Physical Properties}\label{transitparams}
 
@@ -253,8 +253,6 @@ Parameter & Units & This work & \cite{Hellier2009} & \cite{Shporer2018} \\
 %\tablefoottext{a}{Value converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.}
 %\tablefoottext{b}{Value converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs.}
 %\tablefoottext{c}{Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.}}
-
-
 
 
 \subsubsection{WASP-19b}
@@ -629,3 +627,190 @@ Epoch & Transit mid-time & TTV & References\\
 %\tablefoot{
 %\tablefoottext{a}{From the Exoplanet Transit Database (ETD)  \url{var2.astro.cz/ETD}}}
 \end{table}
+
+\subsection{Limits on an Additional Perturber \label{addper}}
+%Comments: Do not delete
+%Written by Tobias C. Hinse
+%The following text was largely taken from TEMPIV paper as the underlying methodology follows exactly that
+%paper (and other papers).
+
+The results from our mid-transit time study in Section~\ref{ttvsection}, allow us to infer an upper mass limit for an additional planet in each system. A perturbing planet will introduce a change in the mid-transit times of a known planet, which can be quantified by the RMS scatter around the nominal (unperturbed) linear ephemeris. The TTV effect is amplified for orbital configurations involving mean-motion resonances \citep{Agol2005, Holman2005, 2008ApJ...688..636N}. In principle, this amplification would allow the detection of a low-mass planetary perturbing body. A larger perturbation implies a larger RMS scatter around the nominal ephemeris.
+
+The applied method follows the technique described in \citet{TEMP1,TEMP2,TEMP4}. The calculation of an upper mass limit is performed numerically via direct orbit integrations. For this task, we have modified the \texttt{FORTRAN}-based \texttt{MICROFARM}\footnote{\url{https://bitbucket.org/chdianthus/microfarm/src}}
+package \citep{go2003,go2008} which utilizes OpenMPI\footnote{\url{https://www.open-mpi.org}} to spawn hundreds of single-task parallel jobs on a suitable super-computing facility. The package's main purpose is the numerical computation of the Mean Exponential Growth factor of Nearby Orbits
+\citep[MEGNO]{cincsimo2000, go2001, ci2003} over a grid of initial values of orbital parameters for an $n$-body problem. The calculation of the RMS scatter of TTVs in the present work follows a direct brute-force method, which proved to be robust given the availability of computing power.
+
+Within the framework of the three-body problem, we integrated the orbits of one of our three hot Jupiters and an additional perturbing planet around their host stars. The mid-transit time was calculated iteratively to a high precision from a series of back-and-forth integrations once a transit of the transiting planet was detected. The best-fit radii of both the planet and the host star were accounted for. We then calculated an analytic least-squares regression to the time-series of transit numbers and mid-transit times to determine a best-fitting linear ephemeris with an associated RMS statistic for the TTVs. The RMS statistic was based on a 20-year integration corresponding to 7763 transits for WASP-18b, 9270 transits for WASP-19b, and 5371 transit events for WASP-77Ab. This procedure was then applied to a grid of masses and semi-major axes of the perturbing planet while fixing all the other orbital parameters. In this study, we have chosen to start the perturbing planet on a circular orbit that is co-planar with the transiting planet; this implies that $\Omega_2=0^{\circ}$ and $\omega_2=0^{\circ}$ for the perturbing and $\Omega_1 = 0^{\circ}$ for the transiting planet. This setting provides a most conservative estimate of the upper mass limit of a possible perturber \citep{bean2009, fukui2011, Hoyer2011, Hoyer2012}. For the interested readers, we refer to \citet{TEMP4}, which has studied the effects of TTVs on varying initial orbital parameters.
+
+\begin{table}
+\caption{Approximate upper mass limits of a putative perturber in various orbital resonances for each system}
+\label{masstable}
+\centering
+\begin{tabular}{cccc}
+\hline \hline
+MMR & WASP-18 & WASP-19 & WASP-77A \\
+($P_{2}/P_{1}$) & $[M_{\oplus}]$ & $[M_{\oplus}]$ & $[M_{\oplus}]$ \\
+\hline
+1:3 & 1.9    & 500\footnote{b} & 1.0 \\
+2:5 & 4.0    & -   & -   \\
+1:2 & 5.0\footnote{a} & 2.0 & 3.5 \\
+3:5 & -      & -      & 2.0 \\
+2:3 & -      & -      & 7.0\footnote{a} \\
+5:3 & -      & 6.0    & 6.0   \\
+7:4 & -      & -      & 10.0 \\
+2:1 & 25\footnote{a}    & 0.9    & 3.5 \\
+7:3 & 80.0\footnote{c}   & -      & -   \\
+5:2 & 10.0   & 3.0    & -   \\
+3:1 & 7.0    & 2.0    & 4.5 \\
+17:5 & 500.0\footnote{d} & -      & -    \\
+4:1 & 50.0   & 100.0\footnote{e}  & 60.0\footnote{f} \\
+\hline
+\end{tabular}
+%\tablefoot{
+%\tablefoottext{a}{Very close to the general instability area.}
+%\tablefoottext{b}{This value is constraint by RV limit of 17.8 $[M_{\oplus}]$}
+%\tablefoottext{c}{This value is constraint by RV limit of 74.6 $[M_{\oplus}]$}
+%\tablefoottext{d}{This value is constraint by RV limit of 82.8 $[M_{\oplus}]$}
+%\tablefoottext{e}{This value is constraint by RV limit of 40.8 $[M_{\oplus}]$}
+%\tablefoottext{f}{This value is constraint by RV limit of 30.8 $[M_{\oplus}]$}}
+\end{table} 
+
+In order to calculate the location of mean-motion resonances, we have used the same code to calculate MEGNO on the same parameter grid. However, this time we integrated each initial grid point for 1000 years, allowing this study to highlight the location of weak chaotic high-order mean-motion resonances. In short, MEGNO quantitatively measures the degree of stochastic behaviour of a non-linear dynamical system and has been proven useful in the detection of chaotic resonances \citep{go2001, hi2010}. In addition to the Newtonian equations of motion, the associated variational equations of motion are solved simultaneously allowing the calculation of MEGNO at each integration time step. The \texttt{MICROFARM} package implements the \texttt{ODEX}\footnote{\url{https://www.unige.ch/~hairer/prog/nonstiff/odex.f}} extrapolation algorithm to numerically solve the system of first-order differential equations.
+
+Following the definition of MEGNO \citep{cincsimo2000} (denoted as $\langle Y\rangle$ in Figures~\ref{megno_wasp18}-\ref{megno_wasp77}), in a dynamical system that evolves quasi-periodically, the quantity $\langle Y \rangle$ will asymptotically approach 2.0 for $t \rightarrow \infty$. In that case, often the orbital elements associated with that orbit are bounded. In case of a chaotic time evolution, the $\langle Y\rangle$ diverges away from 2.0 with orbital parameters exhibiting erratic temporal excursions. For quasi-periodic orbits, we typically have $|\langle Y \rangle - 2.0| < 0.001$ at the end of each integration.
+
+Importantly, MEGNO is unable to prove that a dynamical system is evolving quasi-periodically, meaning that a given system cannot be proven to be stable or bounded for all times. The integration of the equations of motion only considers a limited time period. However, once a given initial condition has found to be chaotic, there is no doubt about its erratic nature in the future.
+
+In the following, we will present the results of each system for which we have calculated the RMS scatter of TTVs on a grid of the masses and semi-major axes of a perturbing planet in a circular, co-planar orbit. Results are shown in Figures~\ref{megno_wasp18} - \ref{megno_wasp77} and Table \ref{masstable}. In each of the three cases, we find the usual instability region located in the proximity of the transiting planet with MEGNO color-coded as yellow (corresponding to $\langle Y\rangle > 5$). The extent of these regions coincides with the results presented in \citet{barnes2006}. The locations of mean-motion resonances are indicated by arrows in each map.
+
+
+\subsubsection{WASP-18b}
+For the WASP-18b system we find a large region of instability when
+compared to the other two systems with the boundaries at the 1:2 interior
+and 2:1 exterior mean-motion resonance. By over-plotting the RMS scatter
+of mid-transit times ($\rm TTV_{\rm RMS}$) for a certain value, we find
+that the TTVs are relatively more sensitive at orbital architectures
+involving mean-motion resonances confirming the results by
+\citet{Agol2005} and \citet{Holman2005}. This also applies to WASP-19 and
+WASP-77A.
+
+As shown in Figure~\ref{megno_wasp18}, we find that a perturbing body of mass (upper limit) around $7-500~M_{\oplus}$ will produce an RMS of $83\,{\rm s}$ when located in the $P_2/P_1=$ 7:3, 5:2, 3:1, 17:5 and 4:1 exterior resonance. For the 1:3 interior resonance, a perturber mass (upper limit) as small as $1.9~M_{\oplus}$ could also cause a RMS mid-transit time scatter of $83\,{\rm s}$.
+
+\subsubsection{WASP-19b}
+For the WASP-19b system the measured transit-timing RMS scatter was $\rm TTV_{\rm RMS}=75,\rm s$. Additional bodies with a mass of $500~M_{\oplus}$ and as low as $2.0~M_{\oplus}$ and $0.9~M_{\oplus}$ at the 1:3, 1:2 (interior) and 2:1 (exterior) mean-motion resonances could cause the observed RMS scatter. Hypothetical planets of $6~M_{\oplus}$, $3~M_{\oplus}$ and $2~M_{\oplus}$ could cause the observed RMS scatter at the 5:3, 5:2 and 3:1 exterior mean-motion resonances, respectively. We refer to Fig.~\ref{megno_wasp19}.
+
+\subsubsection{WASP-77Ab}
+For the WASP-77Ab system the results are somewhat similar to WASP-19b. We refer to Fig.~\ref{megno_wasp77}. The measured RMS of mid-transit timing variations around the linear ephemeris was $\rm TTV_{\rm RMS}=121\rm s$. For interior mean-motion resonances the 1:2 and 2:3 commensurabilities could cause the observed $\rm TTV_{\rm RMS}$ by an additional planet of mass around $3.5~M_{\oplus}$ and $7~M_{\oplus}$. However, the 2:3 resonance is very close to the general instability area rendering the orbit likely to be unstable. Further a $1~M_{\oplus}$ mass planet at the 1:3 interior resonance could also cause a $\rm TTV_{\rm RMS}$ of 121 s. A $2~M_{\oplus}$ mass planet located at the 3:5 resonance, although relatively close to the inner edge of the general instability region, could also explain the observed timing variation. For exterior 
+mean-motion resonances of 2:1, 3:1 and 4:1 an additional planet of mass $3.5~M_{\oplus}, 4.5~M_{\oplus}$ and $60~M_{\oplus}$, could cause a $\rm TTV_{\rm RMS}=121\rm s$, respectively. A subtle difference from the WASP-19b system is found at the 5:2 resonance, which does not exhibit any significant decrease in upper mass planet detection sensitivity.
+
+\subsection{TTV period search}
+
+We have carried out a Lomb-Scargle period analysis \citep{Lomb1976, Scargle1982} for each system's TTVs residuals to search for a significant periodic trend. For this we applied the \texttt{LombScargle}\footnote{\url{http://docs.astropy.org/en/stable/stats/lombscargle.html}} (LS) algorithm available within the \texttt{Astropy} (v3.1.1) Python package \citep{2012cidu.conf...47V, 2015ApJ...812...18V}.
+
+The algorithm is suitable for unevenly-sampled data. We chose to carry out computations using the observed transit epochs for each system as the independent variable. Each epoch is determined with a high degree of confidence. TTV measurement uncertainties were not accounted for since no convincing periodic trend were detected. Default settings were avoided in order to safeguard the analysis from an inappropriate frequency grid choice. We made use of the minimum and maximum frequency heuristic. Periods between 1 and 5000 epochs were searched for. Furthermore, we sampled each peak twelve times. Noteworthy to mention, and often overlooked, is the possible detection of frequencies much larger than the Nyquist sampling frequency \citep{2018ApJS..236...16V}. 
+
+The result for each system is shown in Figs.~\ref{LS_wasp18_random} to \ref{LS_wasp77_random}, were we show the Lomb-Scargle power $P$ from the standard normalization method with $0\le P<1$. The final period is found by multiplying with the final best-fit period for each system. To quantify the significance of period-peaks we calculated the false-alarm probability (FAP) for three different $p$-values. The FAP encodes the probability of detecting a peak of a given height (or higher) and is conditioned on the null-hypothesis that the data is characterized by normal random noise. 
+
+To avoid misinterpretation of the FAP we have calculated synthetic random TTVs for each system in a single realization. For each known epoch, we drew a normal random point with mean zero and standard deviation in accordance with the measured RMS for each timing data set (83 s for WASP-18, 75 s for WASP-19 and 121 s for WASP-77A).
+
+We then recomputed the LS periodogram for each synthetic data set. This method enables a meaningful quantitative assessment of a minimum requirement of the FAP to detect a true periodic signal which clearly stands out from Gaussian noise. We plot the LS periodograms for the synthetic TTVs in the bottom panels of Figs.~\ref{LS_wasp18_random} to \ref{LS_wasp77_random}. For the case of WASP-19 and WASP-77, we found that a reasonable minimum FAP of 0.01\% is required in order to distinguish any signal from white noise. For the case of WASP-18 the threshold is just above 0.01\%. In generally, we found no significant (99.99\% level) periodicity peaks for all three cases.
+%However, with some good will, qualitatively, the LS periodogram for WASP-19 shows a slight decrease in FAP for two periods (at 0.8 and 1.2 in Fig. \ref{LS_wasp19_random}) when compared to the white noise data case.
+
+\begin{figure}
+%% Toby's internal figure note (DO NOT DELETE!!):
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/TTVMEGNOMAPS/WASP18
+%% imported to GIMP, resolution 300, anti-aliasing, rotated, cropped (removing white space), added alpha 
+%% channel, scaled to 12cm, then saved as PNG
+\includegraphics[width=1.0\columnwidth]{imagenes/WASP18_TraMos_83sec_Map001_GIMP_scaled.png}
+\caption{MEGNO ($\langle Y \rangle$) stability map for the WASP-18 system. We over-plot the map with an upper mass of a hypothetical perturbing planet introducing a mid-transit time $\rm TTV_{\rm RMS}$ scatter of $83\,{\rm s}$ (solid line) as obtained in this study. The stipulated line is the upper mass limit as obtained from the RMS scatter $(30.9\, \rm m/s)$ of the radial-velocity curve. For initial conditions resulting in a quasi-periodic (i.e bounded) motion of the system, the $\langle Y\rangle$ value is close to 2.0 (color coded blue). For chaotic (i.e unstable) motion, the $\langle Y \rangle$ is diverging away from 2.0 (color coded red to yellow). Vertical arrows indicate $(P_2/P_1)$ orbital resonances between the perturbing body and the transiting planet. The two planets were assumed to be co-planar, and the perturbing planet's eccentricity was initially set to zero.
+\emph{See electronic version for colors}.}
+\label{megno_wasp18}
+\end{figure}
+
+\begin{figure}
+%% Toby's internal figure note (DO NOT DELETE!!):
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/TTVMEGNOMAPS/WASP19
+%% imported to GIMP, resolution 300, anti-aliasing, rotated, cropped (removing white space), added alpha 
+%% channel, scaled to 12cm, then saved as PNG
+\includegraphics[width=1.0\columnwidth]{imagenes/WASP19_TraMos_Map001_GIMP_scaled.png}
+\caption{Same as Fig.~\ref{megno_wasp18}, but this time for WASP-19 with an $\rm TTV_{\rm RMS}$ of 75 s. The
+RMS for the radial-velocity measurements was $(18.2\,\rm m/s)$. \emph{See electronic version for colors}.}
+\label{megno_wasp19}
+\end{figure}
+
+\begin{figure}
+%% Toby's internal figure note (DO NOT DELETE!!):
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/TTVMEGNOMAPS/WASP77
+%% imported to GIMP, resolution 300, anti-aliasing, rotated, cropped (removing white space), added alpha 
+%% channel, scaled to 12cm, then saved as PNG
+\includegraphics[width=1.0\columnwidth]{imagenes/WASP77_TraMos_121sec_Map001_GIMP_scaled.png}
+\caption{Same as Fig.~\ref{megno_wasp18}, but this time for WASP-77 with an $\rm TTV_{\rm RMS}$ of 121 s. The RMS for the radial-velocity measurements was $(12.0\,\rm m/s)$.
+\emph{See electronic version for colors}.}
+\label{megno_wasp77}
+\end{figure}
+
+\begin{figure*}
+\centering
+%% Toby's internal figure note (DO NOT DELETE!!):
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/GnuPlotPlotting/WASP18
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/Python/WASP18/testingLS
+%% GIMP, original was rotated, cropped (removing white space), scaled to 120cm, then saved as PNG
+\includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP18_New_GIMP.png}
+\includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP18_NormRandom_New_GIMP.png}
+\caption{Lomb-Scargle (standard normalized) power vs period for observed TTV residuals of WASP-18 (\emph{top panel}) and for a simulated set of TTVs randomly drawn from a normal distribution with mean zero and standard deviation of 1.38 minutes (\emph{lower panel}). See text for more details.}
+\label{LS_wasp18_random}
+\end{figure*}
+
+\begin{figure*}
+\centering
+%% Toby's internal figure note (DO NOT DELETE!!):
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/GnuPlotPlotting/WASP19
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/Python/WASP19/testingLS
+%% GIMP, original was rotated, cropped (removing white space), scaled to 120cm, then saved as PNG
+\includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP19_New_GIMP.png}
+\includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP19_NormRandom_New_GIMP.png}
+\caption{Lomb-Scargle (standard normalized) power vs period for observed TTV residuals of WASP-19 (\emph{top
+panel}) and for a simulated set of TTVs randomly drawn from a normal distribution with mean zero and standard
+deviation of 1.33 minutes (\emph{lower panel}). See text for more details.}
+\label{LS_wasp19_random}
+\end{figure*}
+
+\begin{figure*}
+\centering
+%% Toby's internal figure note (DO NOT DELETE!!):
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/GnuPlotPlotting/WASP77
+%% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/Python/WASP77/testingLS
+%% GIMP, original was rotated, cropped (removing white space), scaled to 120cm, then saved as PNG
+\includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP77_New_GIMP.png}
+\includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP77_NormRandom_New_GIMP.png}
+\caption{Lomb-Scargle (standard normalized) power vs period for observed TTV residuals of WASP-77 
+(\emph{top panel}) and for a simulated set of TTVs randomly drawn from a normal distribution with mean zero
+and standard deviation of 2.02 minutes (\emph{lower panel}). See text for more details.}
+\label{LS_wasp77_random}
+\end{figure*}
+
+\section{Summary and Conclusions}\label{summary}
+We performed photometric follow-ups of the transiting exoplanets WASP-18b, WASP-19b and WASP-77Ab with one meter-class telescopes within the TraMoS project. Our 22 new high-precision light curves and archive data were combined together to refine physical and orbital parameters of the systems. 
+
+For WASP-18b we find a larger value for the fraction of the radius $R_p/R_*$ than the most recent work with TESS data \cite{Shporer2018}, and a larger total transit duration $T_{14}$ comparing with \cite{Hellier2009}. The rest of stellar and planetary parameters are all in good agreement with previous results.
+
+In the analysis of WASP-19b, our results are in general, in good agreement with previous works \citep{Hebb2010,Lendl2013}. Only the inclination $i$ and the total duration of the transit $T_{14}$ show important differences. 
+
+In this work we reported the first bulk measurements of the WASP-77Ab system. We find almost no disagreement in the orbital and physical parameters with the discovery paper \cite{Maxted2013}.
+
+We included archival transit times along with the transits from the TraMoS project to obtained refined values for the period $P$ of the three exoplanets, as well as updated linear ephemeris. We report a period of $P=0.94145223\pm9\times10^{-8}$ days for WASP-18b, $P=0.788838852\pm5\times10^{-9}$ days for WASP-19b, and $P=1.3600285\pm5\times10^{-7}$ days for WASP-77Ab. With the proposed linear ephemeris we found $\rm TTV_{RMS}$ of 83 seconds, 75 seconds, and 121 seconds, for WASP-18b, WASP-19b, and WASP-77Ab, respectively. Also, we find a lack of significant TTV periodic signals.  
+
+The $\rm TTV_{RMS}$ could be produce by a perturber body bounded gravitationally with our targets. Thus, we performed orbit integrations in order to find upper mass limits for possible companions. We find that, for WASP-18b, the observed RMS could be produce by a perturber with an upper limit mass of $7-80~M_{\oplus}$ in 3:1, 4:1, 5:2, and 7:3 exterior resonances. For the interior resonances 1:3 and 2:5, a body with a limit mass of $1.9~M_{\oplus}$ and $4~M_{\oplus}$, respectively, could produce the observed $\rm TTV_{RMS}$.
+
+In the case WASP-19b, companions with masses of  0.9, 3, 6 and $2~M_{\oplus}$, in 2:1, 5:2, 5:3 and 3:1 exterior resonances, could reproduce the 75 seconds of scatter. For WASP-77Ab a planet with masses 3.5, 1, 3.5, 4.5, 2, and $10~M_{\oplus}$ in resonances 1:2, 1:3, 2:1, 3:1, 3:5, and 7:4 could produce the observed RMS in the TTVs.
+
+The hypothetical perturbers with the greatest masses for the three targets are discarded, as they are constrained by RV variations. Theses cases are: a body up to $500~M_{\oplus}$ in 17:5 resonance for WASP-18b, $500~M_{\oplus}$ and $100~M_{\oplus}$ in 1:3 and 3:1 resonances for WASP-19b, and $60~M_{\oplus}$ in 4:1 resonances for WASP-77Ab.
+
+We found no significant periodicity in any of the systems by performing a Lomb-Scargle period analysis.
+
+% Add why we can discard an rapid orbital decay
+The absence of a significant TTV signal in WASP-18b and the poor quality of a second order fit, support the conclusion that there is no evidence for a rapid orbital decay, as proposed by \cite{Wilkins2017}. As the TTV technique is sensitive to detect tidal decays on the exoplanets orbits, we could detect any trending in the TTV data, which is not the case. Moreover, theoretical studies \citep{CollierCameron2018} suggest a time span of around 20 years to observe a variations of 4 seconds in this system. Our result support that prediction.
+
+Previous photometric studies of WASP-19b \citep{Lendl2013,Wong2016} also suggest the lack of TTV on this system. Our results include more transit times, 59 versus 56 in \cite{Wong2016} and 14 in \cite{Lendl2013}, and also more recent transits being the last one from the end of 2017. Finding a no periodic TTV signal is consistent with their results. 
+
+This is the first detailed study of WASP-77Ab. Our results will served as base for future photometric and dynamic studies where an extensive follow-up should be performed. WASP-77Ab shows the larger deviation for the linear ephemeris of our targets, with more than 2 minutes. Furthermore, the linear fit on the TTV is not fully representing the data as $\chi^{2}_{red}=1.4$, and a second degree fit shows almost the same value of $\chi^{2}_{red}$. More consecutive transit times are needed in order to understand the truly nature of this planet and its possible companions.

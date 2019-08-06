@@ -1,4 +1,67 @@
 \chapter{The Transit Monitoring in the South project}\label{chap:tramos}
 
-The Transit Monitoring in the South (TraMoS) project started in 2008 aiming to perform photometric follow-up of transiting exoplanets. 
-TODO: Organization of targets from 2008! Plot all targets.
+The Transit Monitoring in the South (TraMoS) project started in 2008 aiming to perform photometric follow-up of transiting exoplanets using telescopes located in Chile.  Through photometric monitoring of transiting events, important information of the planetary system can be obtained, such as the planetary radius, inclination of the orbit, precise planetary mass, among others. Moreover, this kind of analysis allows the detection of variability in the transit's parameters (TPV), if several epochs of the transit event are included. The TraMoS project aims, on the one hand, to refine the physical and orbital parameters of selected exoplanets systems through photometric follow-up and, on the other hand, to search variations in that parameters that could suggest the presence of additional bodies in the system. 
+
+To date, almost 400 transit events have been observed of 144 transiting exoplanets (see Figure XXX). The bulk of the targets in the TraMoS project are hot Jupiters due to its short orbital period and large transit depth. Several facilities were used to perform the photometric follow-up such as the VLT of ESO, the SMARTS 0.9 m and 1 m at Cerro Tololo Inter.American Observatory, the Danish 1.54 m at La Silla Observatory, SWOPE and Du Pont telescopes at Las Campanas Observatory and SOAR telescope at Cerro Pachón Observatory, among others. The diameter size of the telescopes ranges from 0.6 meters to 8 meters. However, in the last stage of the TraMoS project, we built the team expertise using 1 meter-class telescopes, for example in the Danish, SWOPE and SMARTS.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{imagenes/tramos.png}
+\caption{Histogram of the 30 transiting exoplanets with the largest amount of observations within the TraMoS project. The exoplanets WASP-4b and WASP5-b were presented in \cite{Hoyer2012} and \cite{Hoyer2013}. The results from the analysis of WASP-18b, WASP-19b and WASP77A-b are in Cortés-Zuleta et al. 2019 (submitted, see Chapter \ref{chap:paper} for further details). In any of those systems a significant TTV signal was detected.}
+\label{tramos}
+\end{figure}
+  
+The first studies within the TraMoS project were conducted by Sergio Hoyer, former PhD student of Patricio Rojo. In summary, a possible orbital decay of WASP-43b \citep{Hoyer2016b} and OGLE-TR-113b \citep{Hoyer2016} was ruled out, and no significant TTV signal was detected in WASP-4b \citep{Hoyer2012} and WASP-5b \citep{Hoyer2013}.
+
+
+\section{Transit Timing Variations}
+
+Since the discovery of the first exoplanet, one of the principal questions that arose was: are they alone in their systems? The idea of multiplanetary system is a consequence of our knowledge about the planetary system where we live in, and until today the Solar System has the larger number of orbiting planets. Besides the Solar System, Kepler-90 has the same number of confirmed exoplanets: eight. Statistically, around a 20\% of the confirmed exoplanets live in a multiplanetary system, but this number is theoretically larger (cite). 
+
+The Transit Timing Variations (TTV) technique was first proposed as a way to detect Earth-mass planets in multiplanetary systems due to gravitational interactions with a transiting exoplanet \citep{Holman2005,Agol2005}. However, TTVs can be also use to measure tidal interactions between the planet and the star or to detect exomoons \citep{Kipping2009a,Kipping2009b}, among others. 
+
+For a given light curve of a transiting exoplanet (see Fig. \ref{transit}), the transit time $T_{c}$ (or central time of the transit) is computed as:
+
+\begin{equation}
+T_{c} = \frac{t_T}{2}
+\end{equation}
+
+A single transiting planet will stay in a Keplerian orbit around its host star, producing a transit time strictly periodic. Thus, the transit time $T_c$ follows a linear function of the orbital period $P$: 
+
+\begin{equation}
+T_{c}(E) = T_{0} + E \cdot P
+\label{linear_ephemeris} 
+\end{equation}
+
+Where $T_0$ is a reference transit time and $E$ is the number of epochs since $T_0$.  The presence of a second planet produces transits no exactly periodic, hence Eq.~\ref{linear_ephemeris} will not be valid. As the transit times will be no longer a linear function,  the time between  transits varies.  The variation in time produced by the perturbing body depends on the mass and geometry of their orbits. The magnitude of this variation between successive transits of the transiting planet is:
+
+\begin{equation}
+\Delta t = \frac{45\pi}{16} \frac{M_2}{M_*} P_{1} \alpha^3_{e} (1-	\sqrt{2}\alpha^{3/2})^{-2}
+\label{delta_t}
+\end{equation}
+
+Where $\alpha_e = a_1/(a_2(1-e_2))$ is the ratio of the semi-major axis of the planets, considering a nonzero eccentricity for the perturbing planet ($e_2 \neq 0$) and $a_1 < a_2$. The semi-major axis of the transiting exoplanet is $a_1$ and its orbital period $P_1$, while the perturbing planet has a mass $M_2$, semi-major axis $a_2$, orbital period $P_2$ and eccentricity $e_2$. Assuming that the orbital parameters of the known transiting exoplanet are already derived from its light curve, the orbital parameters and mass of the hypothetical pertuber can be estimate numerically \citep{Nesvorny2008,Nesvorny2009}, even if the second planet does not transit the star. 
+
+The TTV method is a efficient tool to search for additional unseen companions, since in order to employ this technique only photometry of the transiting exoplanet during a transit events is required. Moreover, this technique enhances its sensitivity when the two bodies in the system are close to Mean Motion Resonances (MMR) \citep{Agol2005,Steffen2005,Agol2007} (see Figure~\ref{rms_ttv_amplitude}) . 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\columnwidth]{imagenes/rms_ttv_amplitude}
+\caption{Example of a system with a transiting exoplanet of $1~M_{J}$ in a 10-day orbit, around a star with $0.367~M_{\odot}$. The perturber is a Earth-mass planet. Panel \textbf{a} is an O-C diagram showing the measured TTV when the pertuber has a period of 16.11 days, not in Mean Motion Resonance with the transiting planet. Panel \textbf{b} shows the TTV when the transiting planet and the perturbing planet are near an interior 2:1 resonance. The amplification of the TTV signal is by an order of magnitude. (Figure from \cite{Haghighipour2011})}
+\label{rms_ttv_amplitude}
+\end{figure}
+
+\cite{Holman2010} presented the first multiplanetary system confirmed using the TTV method: Kepler-9b and Kepler-9c. 
+
+The no detection of TTV is also important: architecture of the system.
+
+
+
+
+
+
+
+
+\section{This work}
+
+This thesis is an extension of the Transit Monitoring in the South project (TraMoS, see Chapter\ref{chap:tramos}) started in 2008 by Sergio Hoyer and Patricio Rojo. I selected a new sample of transiting exoplanets, all of them hot Jupiters without any companions detected to date.  
