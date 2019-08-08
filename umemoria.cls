@@ -39,7 +39,7 @@
 %% Pasar Opciones a clase Book
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
-\LoadClass[11pt, openany]{book}
+\LoadClass[12pt, openany]{book}
 
 %%----------------------------------------------------------------------------------------------
 %% Packages requeridos
@@ -470,3 +470,5 @@
   \par\nobreak\vspace*{35pt}}
   \@afterheading%
 }
+
+\usepackage[stable]{footmisc}

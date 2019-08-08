@@ -2,7 +2,16 @@
 
 \section*{TraMoS V: Updated ephemeris and transit timing variations of the hot Jupiters WASP-18b, WASP-19b and WASP-77Ab\footnote{Based on paper submitted to A\&A on July 9, 2019.}}
 
-\chapterauthor{P\'ia Cort\'es-Zuleta, Patricio Rojo, Songhu Wang, Tobias C. Hinse, Sergio Hoyer, Bastian Sanhueza, Patricio Correa-Amaro, Julio Albornoz}
+\chapterauthor{P\'ia Cort\'es-Zuleta$^{1,2}$, Patricio Rojo$^{1}$, Songhu Wang$^{2,5}$, Tobias C. Hinse$^{3}$, Sergio Hoyer$^{4}$, Bastian Sanhueza$^{1}$, Patricio Correa-Amaro$^{1}$, Julio Albornoz$^{1}$}
+
+\begin{flushleft}
+\vspace{-1cm}
+$^{1}$ Departamento de Astronom\'ia, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago, Chile \\
+$^{2}$ Department of Astronomy, Yale University, New Haven, CT 06511, USA \\
+$^{3}$ Chungnam National University, Department of Astronomy and Space Science, 34134 Daejeon, Republic of Korea \\ 
+$^{4}$ Aix Marseille Univ, CNRS, CNES, LAM, Marseille, France \\
+$^{5}$ \emph{51 Pegasi b} Fellow \\
+\end{flushleft}
 
 \subsection*{Abstract}
 
@@ -36,6 +45,55 @@ This paper is organized as follows. In Section~\ref{obs} are summarized the phot
 
 \section{Observations and Data Reduction}\label{obs}
 
+\begin{table}
+\caption{Log of Observations}             
+\label{log_table}      
+\centering          
+\begin{threeparttable}
+\begin{tabular}{cccccccc}
+\hline\hline       
+Target & Date & Epoch\tnote{a} & Telescope & Filter & N & $t_{exp}$\tnote{b} & RMS\tnote{c} \\
+& (UTC) &       &           &       &                   & (seconds) & (mmag)\\
+\hline  
+WASP-18 & 2009 Oct 28 &-1904 & SMARTS 1 m & $I$ & 1412 & 1.5 & 8.49  \\
+ 				& 2009 Oct 29 & -1903 & SMARTS 1 m & $I$ & 1435 & 2 & 5.67 \\
+				& 2009 Oct 30 & -1902 & SMARTS 1 m & $I$ & 1198 & 2  & 4.50 \\
+ 				& 2011 Sep 06 & -1184 & SMARTS 1 m & $I$ & 203 & 15 & 2.40 \\
+				& 2016 Sep 24\tnote{d} & 776 & Danish 1.54 m & $I$ & 138 & 90 & 1.05  \\
+				& 2016 Sep 25\tnote{d} & 777 &Danish 1.54 m & $I$ & 159 & 90  & 0.96  \\
+			    & 2016 Sep 26\tnote{d} & 778 & Danish 1.54 m & $I$ & 113 & 90 & 0.87  \\ \smallskip
+				& 2017 Sep 29\tnote{d} & 1169 & Danish 1.54 m & $R$ & 330 & 30 & 2.53 \\
+WASP-19 & 2011 Apr 22 & -923 & SMARTS 1 m &   $I$ &  626  & 12  & 4.31   \\
+     & 2011 Dec 24 & -611 & SMARTS 1 m &   $I$ & 364  & 18  & 35.9 \\
+     & 2013 Mar 13 & -47 & Danish 1.54 m & $R$ & 336 & 35 & 2.15\\
+     & 2013 Apr 20 & 1 & Danish 1.54 m & $R$ & 153 & 100 & 0.80 \\
+     & 2015 Mar 04 & 867 & Danish 1.54 m & $R$ & 235 & 60 & 0.84\\
+     & 2016 Apr 14 & 1383 & Danish 1.54 m & $I$ & 87 & 100 & 0.71\\
+     & 2017 Feb 14 & 1771 & Danish 1.54 m & $I$ & 137 & 90 & 0.79\\
+     & 2017 Apr 08 & 1838 & Danish 1.54 m & $R$ & 125 & 90 & 0.81\\\smallskip
+     & 2017 Oct 03 & 2064 & Danish 1.54 m & $R$ & 43 & 110 & 1.70\\ 
+ WASP-77 & 2013 Aug 20 & -659 & ETD\tnote{e} & $clear$ & 103 & 120 & 3.87  \\
+    & 2013 Oct 30 & -606 & ETD\tnote{e} & $clear$ & 690 & 12 & 5.91 \\
+    & 2015 Sep 29 & -92 & Danish 1.54 m & $R$ &  244 & 30 &  0.84\\
+      & 2015 Oct 03 & -89 & Danish 1.54 m & $R$ &  138 & 60 &  1.84\\
+      & 2016 Sep 26 & 175 & Danish 1.54 m & $I$ &  90 & 90 &  0.47\\
+      & 2016 Sep 30 & 177 & ETD\tnote{e}& $clear$ & 66 & 180 & 2.74 \\
+      & 2016 Oct 07 & 183 & Warsaw 1.3 m & $I$ & 237 & 60 &  2.38 \\ 
+      & 2016 Dec 09 & 229 & ETD\tnote{e} & $R$ & 57 & 180 & 2.11 \\ 
+      & 2017 Oct 01 & 447 & Danish 1.54 m & $B$ &  224 & 30 &   3.48\\
+\hline                  
+\end{tabular}
+\begin{tablenotes}
+	\footnotesize
+	\item[a] The epoch 0 is $T_{0}$ in Tables \ref{wasp18},\ref{tab:wasp19} and \ref{tab:wasp77}, for WASP-18b, WASP-19b and WASP-77Ab, respectively.
+	\item[b] For the variable exposure times, we consider the average during the night.
+	\item[c] RMS values were computed from the best fitted model of each light curve.
+	\item[d] Light curves obtained with only one reference star.
+	\item[e] These light curves were obtained from the Exoplanet Transit Database (ETD) \url{var2.astro.cz/ETD}.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
 We collected 8 light curves for WASP-18b between 2009 and 2017, 9 light curves for WASP-19b between 2011 and 2017, and 5 light curves for WASP-77Ab between 2015 and 2017. We included 4 transits of WASP-77Ab from the Exoplanet Transit Database (ETD) in order to cover a larger timespan.
 
 All of the photometry are collected by using either the Danish 1.54 m telescope at ESO La Silla Observatory, or the SMARTS 1 m at Cerro Tololo Observatory (CTIO), except for one transit of WASP-77Ab that was observed with the Warsaw 1.3 m at Las Campanas Observatory (LCO). The log of our observations is shown in Table \ref{log_table}. All the new light curves used for this work are presented in Figure~\ref{transits}.
@@ -51,57 +109,14 @@ As suggested by \cite{Southworth2009}, most of our observation, especially those
 We reduced the data by using our custom pipeline. It follows the standard procedures of reduction, calibration, and aperture photometry, but customized for each used instrument. The pipeline semi-automatically finds the best aperture and ring size, for the sky that produces the light curve with less RMS. Then, we manually choose the reference stars to produce the differential light curves for each targets.
 
 
-\begin{table*}
-\caption{Log of Observations}             
-\label{log_table}      
-\centering          
-\begin{tabular}{cccccccc}
-\hline\hline       
-Target & Date & Epoch\footnotemark{a} & Telescope & Filter & N & $t_{exp}$\footnotemark{b} & RMS\footnotemark{c} \\
-& (UTC) &       &           &       &                   & (seconds) & (mmag)\\
-\hline  
-WASP-18 & 2009 Oct 28 &-1904 & SMARTS 1 m & $I$ & 1412 & 1.5 & 8.49  \\
- 				& 2009 Oct 29 & -1903 & SMARTS 1 m & $I$ & 1435 & 2 & 5.67 \\
-				& 2009 Oct 30 & -1902 & SMARTS 1 m & $I$ & 1198 & 2  & 4.50 \\
- 				& 2011 Sep 06 & -1184 & SMARTS 1 m & $I$ & 203 & 15 & 2.40 \\
-				& 2016 Sep 24\footnotemark{d} & 776 & Danish 1.54 m & $I$ & 138 & 90 & 1.05  \\
-				& 2016 Sep 25\footnotemark{d} & 777 &Danish 1.54 m & $I$ & 159 & 90  & 0.96  \\
-			    & 2016 Sep 26\footnotemark{d} & 778 & Danish 1.54 m & $I$ & 113 & 90 & 0.87  \\ \smallskip
-				& 2017 Sep 29\footnotemark{d} & 1169 & Danish 1.54 m & $R$ & 330 & 30 & 2.53 \\
-WASP-19 & 2011 Apr 22 & -923 & SMARTS 1 m &   $I$ &  626  & 12  & 4.31   \\
-     & 2011 Dec 24 & -611 & SMARTS 1 m &   $I$ & 364  & 18  & 35.9 \\
-     & 2013 Mar 13 & -47 & Danish 1.54 m & $R$ & 336 & 35 & 2.15\\
-     & 2013 Apr 20 & 1 & Danish 1.54 m & $R$ & 153 & 100 & 0.80 \\
-     & 2015 Mar 04 & 867 & Danish 1.54 m & $R$ & 235 & 60 & 0.84\\
-     & 2016 Apr 14 & 1383 & Danish 1.54 m & $I$ & 87 & 100 & 0.71\\
-     & 2017 Feb 14 & 1771 & Danish 1.54 m & $I$ & 137 & 90 & 0.79\\
-     & 2017 Apr 08 & 1838 & Danish 1.54 m & $R$ & 125 & 90 & 0.81\\\smallskip
-     & 2017 Oct 03 & 2064 & Danish 1.54 m & $R$ & 43 & 110 & 1.70\\ 
- WASP-77 & 2013 Aug 20 & -659 & ETD\footnotemark{e} & $clear$ & 103 & 120 & 3.87  \\
-    & 2013 Oct 30 & -606 & ETD\footnotemark{e} & $clear$ & 690 & 12 & 5.91 \\
-    & 2015 Sep 29 & -92 & Danish 1.54 m & $R$ &  244 & 30 &  0.84\\
-      & 2015 Oct 03 & -89 & Danish 1.54 m & $R$ &  138 & 60 &  1.84\\
-      & 2016 Sep 26 & 175 & Danish 1.54 m & $I$ &  90 & 90 &  0.47\\
-      & 2016 Sep 30 & 177 & ETD\footnotemark{e}& $clear$ & 66 & 180 & 2.74 \\
-      & 2016 Oct 07 & 183 & Warsaw 1.3 m & $I$ & 237 & 60 &  2.38 \\ 
-      & 2016 Dec 09 & 229 & ETD\footnotemark{e} & $R$ & 57 & 180 & 2.11 \\ 
-      & 2017 Oct 01 & 447 & Danish 1.54 m & $B$ &  224 & 30 &   3.48\\
-\hline                  
-\end{tabular}
-\footnotetext{a}{The epoch 0 is $T_{0}$ in Tables , for WASP-18b, WASP-19b and WASP-77Ab, respectively.}
-\footnotetext{b}{For the variable exposure times, we consider the average during the night.}
-\footnotetext{c}{The RMS values were computed from the best fitted model of each light curve.}
-\footnotetext{d}{Light curves obtained with only one reference star.}
-\end{table*}
-
-\begin{table}
-
+\begin{table}[ht]
 \caption{Example photometry of WASP-18, WASP-19 and WASP-77A}
 \label{examplephot}
 \centering
+\begin{threeparttable}
 \begin{tabular}{c c c c}
 \hline \hline
-Target & ${\rm BJD_{TDB}}$\footnotemark{a} & Relative flux & Error\\
+Target & ${\rm BJD_{TDB}}$\tnote{a} & Relative flux & Error\\
 \hline
     WASP-18b &  2457658.658241   & 1.00168 & 0.00078 \\
              &  2457658.660591   & 1.00138 & 0.00080 \\
@@ -123,9 +138,11 @@ WASP-77Ab & 2457299.78624 & 1.00229 & 0.00028 \\
          & ...           & ...         &    ... \\    
 \hline
 \end{tabular}
-\footnotetext{These tables are available in machine-readable form.\\
-\footnotetext{a}{The column time was converted to (${\rm BJD_{TDB}}$), following the procedure of \cite{Eastman2010}.}
-}
+\begin{tablenotes}
+\item These tables are available in machine-readable form.
+\item[a]The column time was converted to (${\rm BJD_{TDB}}$), following the procedure of \cite{Eastman2010}.
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
 
 \section{Light curve and RV analysis}\label{lc}
@@ -143,19 +160,19 @@ In order to reduce significantly the convergence time of the chains during the E
 
 The best-fitted model is presented in Figure~\ref{transits} for our transit data from the TraMoS project, and in Figure~\ref{rv} for the RV archival data.
 
-\begin{figure*}
+\begin{figure}
 \centering
 \includegraphics[width=1.0\textwidth]{imagenes/light_curves2.pdf}
 \caption{Light curves of WASP-18, WASP19 and WASP77 during 8, 9 and 9 different transits, respectively, from the TraMoS project. The fitted best model from EXOFASTv2 is shown as a light blue solid line for WASP-18b, orange for WASP-19b and pink for WASP-77Ab. To the right of each panel are the corresponding residuals of the model. For clarity, both light curves and their residual are offset artificially. The epoch number is indicated above each light curve. The technical information about each observation is listed in Table~\ref{log_table}.}
 \label{transits}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}
 %\vspace{0.1cm}\hspace{0.2cm}
 \includegraphics[width=1.0\textwidth]{imagenes/rv_all.pdf}
 \caption{Radial velocity observations of WASP-18, WASP-19 and WASP-77A from \cite{Hellier2009}, \cite{Hebb2010} and \cite{Maxted2013}, respectively. The best fitted model from the joint modeling of RV and light curves with EXOFASTv2 is in solid line color: light blue for WASP-18b, orange for WASP-19b and pink for WASP-77Ab. The residuals of the model are shown at the bottom panel of each figure.}
 \label{rv}
-\end{figure*}
+\end{figure}
 
 \begin{figure}
 %\vspace{0.2cm}\hspace{0.2cm}
@@ -186,6 +203,11 @@ For the radial velocity parameters, the RV semi-amplitude derived from our analy
 Finally, the derived parameters of the system are, in general, in good agreement with the values from \cite{Hellier2009} and \cite{Shporer2018}. 
 
 \begin{landscape}
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.
+\item[a] Value converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs.
+\end{TableNotes}
 \begin{longtable}{llccc}
 \caption{System parameter of WASP-18}
 \label{wasp18}
@@ -195,59 +217,61 @@ Finally, the derived parameters of the system are, in general, in good agreement
 Parameter & Units & This work & \cite{Hellier2009} & \cite{Shporer2018} \\
 \hline
 \smallskip\\\multicolumn{2}{l}{Stellar Parameters:}&\smallskip\\
-~~~~$M_*$  &Mass (\(M_\odot\))  &$1.294^{+0.063}_{-0.061}$ & $1.25\pm0.13$ &  \\
-~~~~$R_*$  &Radius (\(R_\odot\))  &$1.319^{+0.061}_{-0.062}$ &$1.26^{+0.067}_{-0.054}$ & \\
-~~~~$L_*$  &Luminosity (\(L_\odot\))  &$2.68^{+0.28}_{-0.26}$ & &\\
-~~~~$\rho_*$  &Density (cgs)  &$0.795^{+0.11}_{-0.089}$ & $ 0.707^{+0.056}_{-0.096}$&\\
-~~~~$\log{g}$  & Surface gravity (cgs)  &$4.310^{+0.036}_{-0.033}$ &$4.367^{+0.028}_{-0.042}$ & \\
-~~~~$T_{\rm eff}$  &Effective Temperature (K)  &$6432\pm48$ & $6400\pm100$& \\
-~~~~$[{\rm Fe/H}]$  &Metallicity   &$0.107\pm0.080$ & $0.00\pm0.09$ & \\
-~~~~$Age$  &Age (Gyr)  &$1.57^{+1.4}_{-0.94}$ & $0.5-1.5$ & \\
-%~~~~$d$  &Distance (pc)  &$122.2^{+9.9}_{-8.2}$ & $100\pm10$ & \\
+~~~~$M_*$\dotfill &Mass (\(M_\odot\))\dotfill &$1.294^{+0.063}_{-0.061}$ & $1.25\pm0.13$ &  \\
+~~~~$R_*$\dotfill &Radius (\(R_\odot\))\dotfill &$1.319^{+0.061}_{-0.062}$ &$1.26^{+0.067}_{-0.054}$ & \\
+~~~~$L_*$\dotfill &Luminosity (\(L_\odot\))\dotfill &$2.68^{+0.28}_{-0.26}$ & &\\
+~~~~$\rho_*$\dotfill &Density (cgs)\dotfill &$0.795^{+0.11}_{-0.089}$ & $ 0.707^{+0.056}_{-0.096}$&\\
+~~~~$\log{g}$\dotfill & Surface gravity (cgs)\dotfill &$4.310^{+0.036}_{-0.033}$ &$4.367^{+0.028}_{-0.042}$ & \\
+~~~~$T_{\rm eff}$\dotfill &Effective Temperature (K)\dotfill &$6432\pm48$ & $6400\pm100$& \\
+~~~~$[{\rm Fe/H}]$\dotfill &Metallicity \dotfill &$0.107\pm0.080$ & $0.00\pm0.09$ & \\
+~~~~$Age$\dotfill &Age (Gyr)\dotfill &$1.57^{+1.4}_{-0.94}$ & $0.5-1.5$ & \\
+%~~~~$d$\dotfill &Distance (pc)\dotfill &$122.2^{+9.9}_{-8.2}$ & $100\pm10$ & \\
 
 \smallskip\\\multicolumn{2}{l}{Planetary Parameters:}&\smallskip\\
-~~~~$R_P$  &Radius (\rj)  &$1.310\pm0.071$ & $1.106^{+0.072}_{-0.054}$& $1.192\pm0.038$\\
-~~~~$M_P$  &Mass (\mj)  &$10.48^{+0.42}_{-0.40}$ & $10.30\pm0.69$ & \\
-~~~~$P$  &Period (days)  &$0.94145236\pm(49)$ & $0.94145299\pm(87)$& $0.9414576^{(+34)}_{(-35)}$ \\
-~~~~$e$  &Eccentricity   &$0.0061^{+0.0089}_{-0.0044}$ & &\\
-~~~~$a$  &Semi-major axis (AU)  &$0.02054^{+0.00033}_{-0.00032}$ & $0.02045\pm0.00067$&\\
-~~~~$\omega_*$  &Argument of Periastron (Degrees)  &$-100^{+110}_{-120}$ &  &\\
-~~~~$\rho_P$  &Density (cgs)  &$5.79^{+0.97}_{-0.78}$& $7.73^{+0.78}_{-1.27}$\footnotemark{b} & \\
-~~~~$logg_P$  &Surface gravity   &$4.180^{+0.044}_{-0.041}$ & $4.289^{+0.027}_{-0.050}$ &\\
-~~~~$T_{eq}$  &Equilibrium temperature (K)  &$2485^{+53}_{-56}$ & $2384^{+58}_{-30}$ & \\
-~~~~$\Theta$  &Safronov Number   &$0.254^{+0.015}_{-0.014}$ & &\\
-~~~~$\fave$  &Incident Flux (\fluxcgs)  &$8.66^{+0.77}_{-0.75}$ & & \\
+~~~~$R_P$\dotfill &Radius (\rj)\dotfill &$1.310\pm0.071$ & $1.106^{+0.072}_{-0.054}$& $1.192\pm0.038$\\
+~~~~$M_P$\dotfill &Mass (\mj)\dotfill &$10.48^{+0.42}_{-0.40}$ & $10.30\pm0.69$ & \\
+~~~~$P$\dotfill &Period (days)\dotfill &$0.94145236\pm(49)$ & $0.94145299\pm(87)$& $0.9414576^{(+34)}_{(-35)}$ \\
+~~~~$e$\dotfill &Eccentricity \dotfill &$0.0061^{+0.0089}_{-0.0044}$ & &\\
+~~~~$a$\dotfill &Semi-major axis (AU)\dotfill &$0.02054^{+0.00033}_{-0.00032}$ & $0.02045\pm0.00067$&\\
+~~~~$\omega_*$\dotfill &Argument of Periastron (Degrees)\dotfill &$-100^{+110}_{-120}$ &  &\\
+~~~~$\rho_P$\dotfill &Density (cgs)\dotfill &$5.79^{+0.97}_{-0.78}$& $7.73^{+0.78}_{-1.27}$\tnote{a} & \\
+~~~~$logg_P$\dotfill &Surface gravity \dotfill &$4.180^{+0.044}_{-0.041}$ & $4.289^{+0.027}_{-0.050}$ &\\
+~~~~$T_{eq}$\dotfill &Equilibrium temperature (K)\dotfill &$2485^{+53}_{-56}$ & $2384^{+58}_{-30}$ & \\
+~~~~$\Theta$\dotfill &Safronov Number \dotfill &$0.254^{+0.015}_{-0.014}$ & &\\
+~~~~$\fave$\dotfill &Incident Flux (\fluxcgs)\dotfill &$8.66^{+0.77}_{-0.75}$ & & \\
 
 \smallskip\\\multicolumn{2}{l}{Primary Transit Parameters:}&\smallskip\\
-~~~~$T_0$  &Transit time (\bjdtdb)  &$2456740.80560\pm(19)$ & $2454221.48163\pm(38)$ & $2458361.048072^{(+34)}_{(-35)}$\\
-~~~~$i$  &Inclination (Degrees)  &$83.5^{+2.0}_{-1.6}$ & $86.0\pm2.5$ & $84.31^{+0.40}_{-0.37}$\\
-~~~~$R_P/R_*$  &Radius of planet in stellar radii   &$0.1021\pm0.0011$ &  $0.0935\pm0.0011$ & $0.09721^{+0.00016}_{-0.00017}$\\
-~~~~$a/R_*$  &Semi-major axis in stellar radii   &$3.35^{+0.15}_{-0.13}$ & & $3.523^{+0.028}_{-0.027}$\\
-~~~~$b$  &Impact parameter   &$0.433^{+0.07}_{-0.10}$ & $0.25\pm0.15$ & $0.349^{+0.020}_{-0.022}$\\
-~~~~$\delta$  &Transit depth (fraction)  &$0.01041\pm0.00022$ & & $0.009449^{+0.000032}_{-0.000032}$\\
-~~~~$u_{1,I}$  &linear LD coeff., I band  &$0.207\pm0.019$ & &\\
-~~~~$u_{2,I}$  &quadratic LD coeff., I band  &$0.313\pm0.019$& &\\
-~~~~$u_{1,R}$  &linear LD coeff., R band  & $0.257\pm0.045$ & &\\
-~~~~$u_{2,R}$  &quadratic LD coeff., R band  &$0.309\pm0.048$ & &\\
-~~~~$T_{14}$  &Total transit duration (days)  &$0.0931^{+0.0011}_{-0.0010}$ & $0.08932\pm0.00068$ &\\
-~~~~$P_T$  &A priori non-grazing transit prob   &$0.268^{+0.011}_{-0.012}$ & &\\
-~~~~$P_{T,G}$  &A priori transit prob   &$0.328^{+0.014}_{-0.015}$ & &\\
-~~~~$\tau$  &Ingress/egress transit duration (days)  &$0.0107\pm0.0010$ & &\\
+~~~~$T_0$\dotfill &Transit time (\bjdtdb)\dotfill &$2456740.80560\pm(19)$ & $2454221.48163\pm(38)$ & $2458361.048072^{(+34)}_{(-35)}$\\
+~~~~$i$\dotfill &Inclination (Degrees)\dotfill &$83.5^{+2.0}_{-1.6}$ & $86.0\pm2.5$ & $84.31^{+0.40}_{-0.37}$\\
+~~~~$R_P/R_*$\dotfill &Radius of planet in stellar radii \dotfill &$0.1021\pm0.0011$ &  $0.0935\pm0.0011$ & $0.09721^{+0.00016}_{-0.00017}$\\
+~~~~$a/R_*$\dotfill &Semi-major axis in stellar radii \dotfill &$3.35^{+0.15}_{-0.13}$ & & $3.523^{+0.028}_{-0.027}$\\
+~~~~$b$\dotfill &Impact parameter \dotfill &$0.433^{+0.07}_{-0.10}$ & $0.25\pm0.15$ & $0.349^{+0.020}_{-0.022}$\\
+~~~~$\delta$\dotfill &Transit depth (fraction)\dotfill &$0.01041\pm0.00022$ & & $0.009449^{+0.000032}_{-0.000032}$\\
+~~~~$u_{1,I}$\dotfill &linear LD coeff., I band\dotfill &$0.207\pm0.019$ & &\\
+~~~~$u_{2,I}$\dotfill &quadratic LD coeff., I band\dotfill &$0.313\pm0.019$& &\\
+~~~~$u_{1,R}$\dotfill &linear LD coeff., R band\dotfill & $0.257\pm0.045$ & &\\
+~~~~$u_{2,R}$\dotfill &quadratic LD coeff., R band\dotfill &$0.309\pm0.048$ & &\\
+~~~~$T_{14}$\dotfill &Total transit duration (days)\dotfill &$0.0931^{+0.0011}_{-0.0010}$ & $0.08932\pm0.00068$ &\\
+~~~~$P_T$\dotfill &A priori non-grazing transit prob \dotfill &$0.268^{+0.011}_{-0.012}$ & &\\
+~~~~$P_{T,G}$\dotfill &A priori transit prob \dotfill &$0.328^{+0.014}_{-0.015}$ & &\\
+~~~~$\tau$\dotfill &Ingress/egress transit duration (days)\dotfill &$0.0107\pm0.0010$ & &\\
 
 \smallskip\\\multicolumn{2}{l}{RV Parameters:}&\smallskip\\
-~~~~$ecos{\omega_*}$  &   &$-0.0004^{+0.0038}_{-0.0045}$ & &\\
-~~~~$esin{\omega_*}$  &   &$-0.0008^{+0.0056}_{-0.0092}$ & &\\
-~~~~$K$  &RV semi-amplitude (m/s)  &$1807^{+34}_{-36}$ & $1818.3\pm8.0$ &\\
-~~~~$M_P\sin i$  &Minimum mass (\mj)  &$10.40\pm0.40$ & &\\
+~~~~$e\cos{\omega_*}$\dotfill & \dotfill &$-0.0004^{+0.0038}_{-0.0045}$ & &\\
+~~~~$e\sin{\omega_*}$\dotfill & \dotfill &$-0.0008^{+0.0056}_{-0.0092}$ & &\\
+~~~~$K$\dotfill &RV semi-amplitude (m/s)\dotfill &$1807^{+34}_{-36}$ & $1818.3\pm8.0$ &\\
+~~~~$M_P\sin i$\dotfill &Minimum mass (\mj)\dotfill &$10.40\pm0.40$ & &\\
 \smallskip\\\multicolumn{2}{l}{Secondary Eclipse Parameters:}&\smallskip\\
-~~~~$T_S$  &Time of eclipse (\bjdtdb)  &$2457657.3076^{+0.0023}_{-0.0027}$ & &\\
-~~~~$b_S$  &Eclipse impact parameter   &$0.431^{+0.070}_{-0.100}$ & &\\
-~~~~$\tau_S$  &Ingress/egress eclipse duration (days)  &$0.0106^{+0.0011}_{-0.0010}$ & &\\
-~~~~$T_{S,14}$  &Total eclipse duration (days)  &$0.0929\pm0.0017$ & &\\
-~~~~$P_S$  &A priori non-grazing eclipse prob   &$0.269^{+0.010}_{-0.011}$ & &\\
-~~~~$P_{S,G}$  &A priori eclipse prob   &$0.330^{+0.013}_{-0.014}$ & &\\
-\hline 
+~~~~$T_S$\dotfill &Time of eclipse (\bjdtdb)\dotfill &$2457657.3076^{+0.0023}_{-0.0027}$ & &\\
+~~~~$b_S$\dotfill &Eclipse impact parameter \dotfill &$0.431^{+0.070}_{-0.100}$ & &\\
+~~~~$\tau_S$\dotfill &Ingress/egress eclipse duration (days)\dotfill &$0.0106^{+0.0011}_{-0.0010}$ & &\\
+~~~~$T_{S,14}$\dotfill &Total eclipse duration (days)\dotfill &$0.0929\pm0.0017$ & &\\
+~~~~$P_S$\dotfill &A priori non-grazing eclipse prob \dotfill &$0.269^{+0.010}_{-0.011}$ & &\\
+~~~~$P_{S,G}$\dotfill &A priori eclipse prob \dotfill &$0.330^{+0.013}_{-0.014}$ & &\\
+\hline
+\insertTableNotes \\
 \end{longtable}
+\end{ThreePartTable}
 \end{landscape}
 %\tablefoot{
 %\tablefoottext{a}{Value converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.}
@@ -422,7 +446,7 @@ The primary transit parameters, as well as the RV parameters and the derived pla
 
 \subsection{Transit Timing Variations}\label{ttvsection}
 
- A transit timing variation is represented trough a difference in time from the transit mid-time $T_c$, for a planet in Keplerian motion following a linear ephemeris of the orbital period. The TTVs were computed considering our transit times from the TraMoS project, as well as including previous published ones. A refined orbital period was linearly fitted, considering 19, 59 and 11 transit times of WASP-18b, WASP-19b, and WASP-77Ab, respectively. Along the linear fit, we also tested a second degree polynomial fit to analyze a possible orbital decay. Both fit considered the errors of the data. In Figures~\ref{wasp18_ttv}, \ref{wasp19_ttv}, and XXX, are presented all the TTV values for the transit times of WASP-18b, WASP-19b and WASP-77Ab, respectively.
+ A transit timing variation is represented trough a difference in time from the transit mid-time $T_c$, for a planet in Keplerian motion following a linear ephemeris of the orbital period. The TTVs were computed considering our transit times from the TraMoS project, as well as including previous published ones. A refined orbital period was linearly fitted, considering 19, 59 and 11 transit times of WASP-18b, WASP-19b, and WASP-77Ab, respectively. Along the linear fit, we also tested a second degree polynomial fit to analyze a possible orbital decay. Both fit considered the errors of the data. In Figure \ref{all_ttv} are presented all the TTV values for the transit times of WASP-18b, WASP-19b and WASP-77Ab, respectively.
 
 If the planet stays in a Keplerian orbit, its transit time $T_{c}$ of each epoch $E$ should follow a linear function of the orbital period $P$.
 
@@ -431,6 +455,13 @@ T_{\rm C}(E)=T_{\rm C}(0)+E \cdot P
 \end{equation}
 
 Where $T_{c}(0)$ is the optimal transit time in an arbitrary zero epoch. The best-fitted values of $T_{c}(0)$ for WASP-18b, WASP-19b and WASP-77Ab, are listed in Tables~\ref{wasp18},~\ref{tab:wasp19} and \ref{tab:wasp77}, respectively.
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{imagenes/TTVs.png}
+\caption{Observed minus calculated mid-transit times (TTV) for WASP-18b (top), WASP-19b (center) and WASP-77Ab (bottom). The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time (See Section \ref{ttvsection}) computed from our refined orbital period. For that, we considered 19, 59 and 11 transit times of WASP-18b, WASP-19b, and WASP-77Ab, respectively. The grey area corresponds to the error propagation at $1\sigma$, where the quadratic trend looks almost horizontal. The points in color are the TTV from the newly light curves of the TraMoS project (WASP-18b: light blue, WASP-19b: orange, WASP-77Ab: pink) and the black points in the three panels are TTVs measured from previous published transit times. The RMS scatter from the linear ephemeris are 83 seconds for WASP-18b; 75 seconds for WASP-19b, and 121 seconds for WASP-77Ab.}
+\label{all_ttv}
+\end{figure}
 
 
 \subsubsection{WASP-18b}
@@ -444,7 +475,7 @@ The orbital period $P$ in Eq.~\ref{eq1_w18} is in complete agreement with the va
 
 Table~\ref{times_wasp18} lists the TTV of our transit times and also, of data from previous works \citep{Triaud2010,Hellier2009,Maxted2013b} of WASP-18b. 
 
-Shown in Figure~\ref{wasp18_ttv} is the linear plot of TTV versus epoch for this planet. The deviations of the transit times from the linear ephemeris has an RMS of 83 seconds. The greater deviations come from the transit time of the epochs $-1904$ and $-1184$, which are over the linear ephemeris by $2.5\sigma$ and $1.9\sigma$, respectively. If those values are removed, the RMS decreases to 61 seconds. Considering all the transit times in Table~\ref{times_wasp18} without the epochs $-1904$ and $-1184$, all the TTVs lie within $1.6\sigma$ in the linear fit. 
+The top panel of Figure~\ref{all_ttv} is the linear plot of TTV versus epoch for this planet. The deviations of the transit times from the linear ephemeris has an RMS of 83 seconds. The greater deviations come from the transit time of the epochs $-1904$ and $-1184$, which are over the linear ephemeris by $2.5\sigma$ and $1.9\sigma$, respectively. If those values are removed, the RMS decreases to 61 seconds. Considering all the transit times in Table~\ref{times_wasp18} without the epochs $-1904$ and $-1184$, all the TTVs lie within $1.6\sigma$ in the linear fit. 
 
 The epoch $-1184$ has the greatest error in our sample because it is not a complete transit.
 
@@ -485,13 +516,6 @@ Epoch & Transit mid-time & TTV & References\\
 %(2) \citet{Triaud2010}; (3) \citet{Maxted2013}.}
 \end{table} 
 
-\begin{figure*}
-%\vspace{0.1cm}\hspace{0.2cm}
-\includegraphics[width=1.0\textwidth]{imagenes/WASP18_TTV.png}
-\caption{Observed minus calculated mid-transit times (TTV) for WASP-18b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 63 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$, where the quadratic trend looks almost horizontal.  The RMS scatter from the linear ephemeris is 47 seconds.}
-\label{wasp18_ttv}
-\end{figure*}
-
 \subsubsection{WASP-19b}
 %The best values of the parameters in Equation \ref{eq1} for WASP-19b are $T_{c}=2456402.7128^{+(17)}_{-(14)}\,[\rm{BJD_{TDB}}]$ and $P=0.78883852^{+(75)}_{-(82)}\,{\rm days}$. 
 
@@ -502,7 +526,7 @@ T_{\rm C}(E)=2456402.7128\pm(16)+E \cdot 0.788838858\pm(47)
 
 The TTV values from the proposed linear ephemeris are listed in Table \ref{times_wasp19}, including transit times from the previous works \citep{Hebb2010,Anderson2010,Lendl2013,Tregloan2013,Bean2013,Mancini2013}. 
 
-Figure~\ref{wasp19_ttv} shows the TTV values versus epoch, for all the transit time considered in this work.
+At the middle panel of Figure~\ref{all_ttv} are the TTV values versus epoch, for all the transit time considered in this work.
 
 The RMS from the linear ephemeris is about 75 seconds. The epoch of $-1011$ is the only one with a transit time deviation above $1.5\,\sigma$ from the linear ephemeris. If it is removed, then the RMS decreases to 69 seconds. Moreover, in our data the epoch $-611$ has one of the greatest errors due to bad weather conditions.
 
@@ -581,12 +605,6 @@ Epoch & Transit mid-time & TTV & References\\
 %(2) \citet{Anderson2010}; (3) \citet{Lendl2013}; (4) Exoplanet Transit Database (ETD) \url{var2.astro.cz/ETD}; (5) \citet{Tregloan2013}; (6) \citet{Mancini2013}; (7) \citet{Bean2013}; (8) \citet{Sedaghati2015}.}
 \end{longtable} 
 
-\begin{figure*}
-%\vspace{0.1cm}\hspace{0.2cm}
-\includegraphics[width=1.0\textwidth]{imagenes/WASP19_TTV.png}
-\caption{Observed minus calculated mid-transit times (TTV) for WASP-19b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 87 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$, where the quadratic trend looks almost horizontal.  The RMS scatter from the linear ephemeris is 65 seconds.}
-\label{wasp19_ttv}
-\end{figure*}
 
 \subsubsection{WASP-77Ab}
 
@@ -595,7 +613,7 @@ As in the previous targets, we computed a refined linear ephemeris equation for 
 T_{\rm C}(E)=2457420.88439\pm(85)+E \cdot 1.36002854\pm(52)
 \end{equation}
 
-In Table~\ref{tab:wasp77} are listed the TTV values of our transit times and from previous works \citep{Turner2016,Maxted2013} of WASP-77Ab and, at the bottom of Figure  XXX are plotted versus epoch. The scatter of all the transit times is about $RMS=121$ seconds. 
+In Table~\ref{tab:wasp77} are listed the TTV values of our transit times and from previous works \citep{Turner2016,Maxted2013} of WASP-77Ab and, at the bottom of Figure \ref{all_ttv} are plotted versus epoch. The scatter of all the transit times is about $RMS=121$ seconds. 
 
 The epochs $175$ and $229$ are above $2\,\sigma$ from the expected transit time following the linear ephemeris, while all the others epochs lie within $1.5\,\sigma$ from it. When removing the epochs $175$ and $229$, the RMS decreases to 88 seconds. 
 
@@ -628,7 +646,7 @@ Epoch & Transit mid-time & TTV & References\\
 %\tablefoottext{a}{From the Exoplanet Transit Database (ETD)  \url{var2.astro.cz/ETD}}}
 \end{table}
 
-\subsection{Limits on an Additional Perturber \label{addper}}
+\subsection{Limits on an Additional Perturber\footnote{This section was done by Tobias C. Hinse and it is added for completeness of the study.}}\label{addper}
 %Comments: Do not delete
 %Written by Tobias C. Hinse
 %The following text was largely taken from TEMPIV paper as the underlying methodology follows exactly that
@@ -696,26 +714,6 @@ WASP-77A.
 
 As shown in Figure~\ref{megno_wasp18}, we find that a perturbing body of mass (upper limit) around $7-500~M_{\oplus}$ will produce an RMS of $83\,{\rm s}$ when located in the $P_2/P_1=$ 7:3, 5:2, 3:1, 17:5 and 4:1 exterior resonance. For the 1:3 interior resonance, a perturber mass (upper limit) as small as $1.9~M_{\oplus}$ could also cause a RMS mid-transit time scatter of $83\,{\rm s}$.
 
-\subsubsection{WASP-19b}
-For the WASP-19b system the measured transit-timing RMS scatter was $\rm TTV_{\rm RMS}=75,\rm s$. Additional bodies with a mass of $500~M_{\oplus}$ and as low as $2.0~M_{\oplus}$ and $0.9~M_{\oplus}$ at the 1:3, 1:2 (interior) and 2:1 (exterior) mean-motion resonances could cause the observed RMS scatter. Hypothetical planets of $6~M_{\oplus}$, $3~M_{\oplus}$ and $2~M_{\oplus}$ could cause the observed RMS scatter at the 5:3, 5:2 and 3:1 exterior mean-motion resonances, respectively. We refer to Fig.~\ref{megno_wasp19}.
-
-\subsubsection{WASP-77Ab}
-For the WASP-77Ab system the results are somewhat similar to WASP-19b. We refer to Fig.~\ref{megno_wasp77}. The measured RMS of mid-transit timing variations around the linear ephemeris was $\rm TTV_{\rm RMS}=121\rm s$. For interior mean-motion resonances the 1:2 and 2:3 commensurabilities could cause the observed $\rm TTV_{\rm RMS}$ by an additional planet of mass around $3.5~M_{\oplus}$ and $7~M_{\oplus}$. However, the 2:3 resonance is very close to the general instability area rendering the orbit likely to be unstable. Further a $1~M_{\oplus}$ mass planet at the 1:3 interior resonance could also cause a $\rm TTV_{\rm RMS}$ of 121 s. A $2~M_{\oplus}$ mass planet located at the 3:5 resonance, although relatively close to the inner edge of the general instability region, could also explain the observed timing variation. For exterior 
-mean-motion resonances of 2:1, 3:1 and 4:1 an additional planet of mass $3.5~M_{\oplus}, 4.5~M_{\oplus}$ and $60~M_{\oplus}$, could cause a $\rm TTV_{\rm RMS}=121\rm s$, respectively. A subtle difference from the WASP-19b system is found at the 5:2 resonance, which does not exhibit any significant decrease in upper mass planet detection sensitivity.
-
-\subsection{TTV period search}
-
-We have carried out a Lomb-Scargle period analysis \citep{Lomb1976, Scargle1982} for each system's TTVs residuals to search for a significant periodic trend. For this we applied the \texttt{LombScargle}\footnote{\url{http://docs.astropy.org/en/stable/stats/lombscargle.html}} (LS) algorithm available within the \texttt{Astropy} (v3.1.1) Python package \citep{2012cidu.conf...47V, 2015ApJ...812...18V}.
-
-The algorithm is suitable for unevenly-sampled data. We chose to carry out computations using the observed transit epochs for each system as the independent variable. Each epoch is determined with a high degree of confidence. TTV measurement uncertainties were not accounted for since no convincing periodic trend were detected. Default settings were avoided in order to safeguard the analysis from an inappropriate frequency grid choice. We made use of the minimum and maximum frequency heuristic. Periods between 1 and 5000 epochs were searched for. Furthermore, we sampled each peak twelve times. Noteworthy to mention, and often overlooked, is the possible detection of frequencies much larger than the Nyquist sampling frequency \citep{2018ApJS..236...16V}. 
-
-The result for each system is shown in Figs.~\ref{LS_wasp18_random} to \ref{LS_wasp77_random}, were we show the Lomb-Scargle power $P$ from the standard normalization method with $0\le P<1$. The final period is found by multiplying with the final best-fit period for each system. To quantify the significance of period-peaks we calculated the false-alarm probability (FAP) for three different $p$-values. The FAP encodes the probability of detecting a peak of a given height (or higher) and is conditioned on the null-hypothesis that the data is characterized by normal random noise. 
-
-To avoid misinterpretation of the FAP we have calculated synthetic random TTVs for each system in a single realization. For each known epoch, we drew a normal random point with mean zero and standard deviation in accordance with the measured RMS for each timing data set (83 s for WASP-18, 75 s for WASP-19 and 121 s for WASP-77A).
-
-We then recomputed the LS periodogram for each synthetic data set. This method enables a meaningful quantitative assessment of a minimum requirement of the FAP to detect a true periodic signal which clearly stands out from Gaussian noise. We plot the LS periodograms for the synthetic TTVs in the bottom panels of Figs.~\ref{LS_wasp18_random} to \ref{LS_wasp77_random}. For the case of WASP-19 and WASP-77, we found that a reasonable minimum FAP of 0.01\% is required in order to distinguish any signal from white noise. For the case of WASP-18 the threshold is just above 0.01\%. In generally, we found no significant (99.99\% level) periodicity peaks for all three cases.
-%However, with some good will, qualitatively, the LS periodogram for WASP-19 shows a slight decrease in FAP for two periods (at 0.8 and 1.2 in Fig. \ref{LS_wasp19_random}) when compared to the white noise data case.
-
 \begin{figure}
 %% Toby's internal figure note (DO NOT DELETE!!):
 %% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/TTVMEGNOMAPS/WASP18
@@ -726,6 +724,10 @@ We then recomputed the LS periodogram for each synthetic data set. This method e
 \emph{See electronic version for colors}.}
 \label{megno_wasp18}
 \end{figure}
+
+
+\subsubsection{WASP-19b}
+For the WASP-19b system the measured transit-timing RMS scatter was $\rm TTV_{\rm RMS}=75,\rm s$. Additional bodies with a mass of $500~M_{\oplus}$ and as low as $2.0~M_{\oplus}$ and $0.9~M_{\oplus}$ at the 1:3, 1:2 (interior) and 2:1 (exterior) mean-motion resonances could cause the observed RMS scatter. Hypothetical planets of $6~M_{\oplus}$, $3~M_{\oplus}$ and $2~M_{\oplus}$ could cause the observed RMS scatter at the 5:3, 5:2 and 3:1 exterior mean-motion resonances, respectively. We refer to Fig.~\ref{megno_wasp19}.
 
 \begin{figure}
 %% Toby's internal figure note (DO NOT DELETE!!):
@@ -738,6 +740,11 @@ RMS for the radial-velocity measurements was $(18.2\,\rm m/s)$. \emph{See electr
 \label{megno_wasp19}
 \end{figure}
 
+
+\subsubsection{WASP-77Ab}
+For the WASP-77Ab system the results are somewhat similar to WASP-19b. We refer to Fig.~\ref{megno_wasp77}. The measured RMS of mid-transit timing variations around the linear ephemeris was $\rm TTV_{\rm RMS}=121\rm s$. For interior mean-motion resonances the 1:2 and 2:3 commensurabilities could cause the observed $\rm TTV_{\rm RMS}$ by an additional planet of mass around $3.5~M_{\oplus}$ and $7~M_{\oplus}$. However, the 2:3 resonance is very close to the general instability area rendering the orbit likely to be unstable. Further a $1~M_{\oplus}$ mass planet at the 1:3 interior resonance could also cause a $\rm TTV_{\rm RMS}$ of 121 s. A $2~M_{\oplus}$ mass planet located at the 3:5 resonance, although relatively close to the inner edge of the general instability region, could also explain the observed timing variation. For exterior 
+mean-motion resonances of 2:1, 3:1 and 4:1 an additional planet of mass $3.5~M_{\oplus}, 4.5~M_{\oplus}$ and $60~M_{\oplus}$, could cause a $\rm TTV_{\rm RMS}=121\rm s$, respectively. A subtle difference from the WASP-19b system is found at the 5:2 resonance, which does not exhibit any significant decrease in upper mass planet detection sensitivity.
+
 \begin{figure}
 %% Toby's internal figure note (DO NOT DELETE!!):
 %% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/TTVMEGNOMAPS/WASP77
@@ -749,7 +756,21 @@ RMS for the radial-velocity measurements was $(18.2\,\rm m/s)$. \emph{See electr
 \label{megno_wasp77}
 \end{figure}
 
-\begin{figure*}
+\subsection{TTV period search\footnote{This section was done by Tobias C. Hinse and it is added for completeness of the study.}}
+
+We have carried out a Lomb-Scargle period analysis \citep{Lomb1976, Scargle1982} for each system's TTVs residuals to search for a significant periodic trend. For this we applied the \texttt{LombScargle}\footnote{\url{http://docs.astropy.org/en/stable/stats/lombscargle.html}} (LS) algorithm available within the \texttt{Astropy} (v3.1.1) Python package \citep{2012cidu.conf...47V, 2015ApJ...812...18V}.
+
+The algorithm is suitable for unevenly-sampled data. We chose to carry out computations using the observed transit epochs for each system as the independent variable. Each epoch is determined with a high degree of confidence. TTV measurement uncertainties were not accounted for since no convincing periodic trend were detected. Default settings were avoided in order to safeguard the analysis from an inappropriate frequency grid choice. We made use of the minimum and maximum frequency heuristic. Periods between 1 and 5000 epochs were searched for. Furthermore, we sampled each peak twelve times. Noteworthy to mention, and often overlooked, is the possible detection of frequencies much larger than the Nyquist sampling frequency \citep{2018ApJS..236...16V}. 
+
+The result for each system is shown in Figs.~\ref{LS_wasp18_random} to \ref{LS_wasp77_random}, were we show the Lomb-Scargle power $P$ from the standard normalization method with $0\le P<1$. The final period is found by multiplying with the final best-fit period for each system. To quantify the significance of period-peaks we calculated the false-alarm probability (FAP) for three different $p$-values. The FAP encodes the probability of detecting a peak of a given height (or higher) and is conditioned on the null-hypothesis that the data is characterized by normal random noise. 
+
+To avoid misinterpretation of the FAP we have calculated synthetic random TTVs for each system in a single realization. For each known epoch, we drew a normal random point with mean zero and standard deviation in accordance with the measured RMS for each timing data set (83 s for WASP-18, 75 s for WASP-19 and 121 s for WASP-77A).
+
+We then recomputed the LS periodogram for each synthetic data set. This method enables a meaningful quantitative assessment of a minimum requirement of the FAP to detect a true periodic signal which clearly stands out from Gaussian noise. We plot the LS periodograms for the synthetic TTVs in the bottom panels of Figs.~\ref{LS_wasp18_random} to \ref{LS_wasp77_random}. For the case of WASP-19 and WASP-77, we found that a reasonable minimum FAP of 0.01\% is required in order to distinguish any signal from white noise. For the case of WASP-18 the threshold is just above 0.01\%. In generally, we found no significant (99.99\% level) periodicity peaks for all three cases.
+%However, with some good will, qualitatively, the LS periodogram for WASP-19 shows a slight decrease in FAP for two periods (at 0.8 and 1.2 in Fig. \ref{LS_wasp19_random}) when compared to the white noise data case.
+
+
+\begin{figure}
 \centering
 %% Toby's internal figure note (DO NOT DELETE!!):
 %% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/GnuPlotPlotting/WASP18
@@ -759,9 +780,9 @@ RMS for the radial-velocity measurements was $(18.2\,\rm m/s)$. \emph{See electr
 \includegraphics[width=0.7\columnwidth]{imagenes/LS_WASP18_NormRandom_New_GIMP.png}
 \caption{Lomb-Scargle (standard normalized) power vs period for observed TTV residuals of WASP-18 (\emph{top panel}) and for a simulated set of TTVs randomly drawn from a normal distribution with mean zero and standard deviation of 1.38 minutes (\emph{lower panel}). See text for more details.}
 \label{LS_wasp18_random}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}
 \centering
 %% Toby's internal figure note (DO NOT DELETE!!):
 %% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/GnuPlotPlotting/WASP19
@@ -773,9 +794,9 @@ RMS for the radial-velocity measurements was $(18.2\,\rm m/s)$. \emph{See electr
 panel}) and for a simulated set of TTVs randomly drawn from a normal distribution with mean zero and standard
 deviation of 1.33 minutes (\emph{lower panel}). See text for more details.}
 \label{LS_wasp19_random}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}
+\begin{figure}
 \centering
 %% Toby's internal figure note (DO NOT DELETE!!):
 %% Project path: /home/tobiash/simulations/TRAMOS_PiaCortesZuleta/LombScargle/GnuPlotPlotting/WASP77
@@ -787,7 +808,7 @@ deviation of 1.33 minutes (\emph{lower panel}). See text for more details.}
 (\emph{top panel}) and for a simulated set of TTVs randomly drawn from a normal distribution with mean zero
 and standard deviation of 2.02 minutes (\emph{lower panel}). See text for more details.}
 \label{LS_wasp77_random}
-\end{figure*}
+\end{figure}
 
 \section{Summary and Conclusions}\label{summary}
 We performed photometric follow-ups of the transiting exoplanets WASP-18b, WASP-19b and WASP-77Ab with one meter-class telescopes within the TraMoS project. Our 22 new high-precision light curves and archive data were combined together to refine physical and orbital parameters of the systems. 
