@@ -214,6 +214,13 @@ Finally, the derived parameters of the system are, in general, in good agreement
 \centering
 \tabularnewline
 \hline 
+\endfirsthead
+\multicolumn{5}{c}
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+Parameter & Units & This work & \cite{Hellier2009} & \cite{Shporer2018} \\
+\hline
+\endhead
 Parameter & Units & This work & \cite{Hellier2009} & \cite{Shporer2018} \\
 \hline
 \smallskip\\\multicolumn{2}{l}{Stellar Parameters:}&\smallskip\\
@@ -291,19 +298,33 @@ As the same RV data set from the discovery paper \citep{Hebb2010} was used to pe
 The planetary parameters derived from the light curve and radial velocity analysis are almost all in good agreement with the comparison works. The only parameter with a difference greater than $3\sigma$ is our estimation of the Equilibrium Temperature $T_{eq}$ compared with the result of \cite{Hebb2010}. However, our result is in better agreement with \cite{Lendl2013} by less than $2\sigma$.
 
 \begin{landscape}
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.
+\item[a] For comparison, the results from \cite{Hellier2009} that considered free eccentricity were used.
+\item[b] Values converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.
+\item[c] Value converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs.
+\end{TableNotes}
 \begin{longtable}{llccc}
 \caption{System parameter of WASP-19}
 \label{tab:wasp19}
 \centering
 \tabularnewline
 \hline 
-~~~Parameter & Units & This work & \cite{Hebb2010}\footnote{a} & \cite{Lendl2013}\\
+\endfirsthead
+\multicolumn{5}{c}
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+Parameter & Units & This work & \cite{Hebb2010}\tnote{a} & \cite{Lendl2013}\\
+\hline
+\endhead
+Parameter & Units & This work & \cite{Hebb2010}\tnote{a} & \cite{Lendl2013}\\
 \hline
 \smallskip\\\multicolumn{2}{l}{Stellar Parameters:}&\smallskip\\
 ~~~~$M_*$\dotfill &Mass (\(M_\odot\))\dotfill &$0.965^{+0.091}_{-0.095}$ & $0.95\pm0.10$ & $0.968^{+0.084}_{-0.079}$ \\
 ~~~~$R_*$\dotfill &Radius (\(R_\odot\))\dotfill &$1.006^{+0.031}_{-0.034}$ & $0.93^{+0.05}_{-0.04}$& $0.994\pm0.031$\\
 ~~~~$L_*$\dotfill &Luminosity (\(L_\odot\))\dotfill &$0.905^{+0.071}_{-0.069}$\\
-~~~~$\rho_*$\dotfill &Density (cgs)\dotfill &$1.339^{+0.056}_{-0.058}$ & $1.19^{+0.12}_{-0.11}$\footnote{b}  & $1.384^{+0.055}_{-0.051}$\footnote{b}\\
+~~~~$\rho_*$\dotfill &Density (cgs)\dotfill &$1.339^{+0.056}_{-0.058}$ & $1.19^{+0.12}_{-0.11}$\tnote{b}  & $1.384^{+0.055}_{-0.051}$\tnote{b}\\
 ~~~~$\log{g}$\dotfill &Surface gravity (cgs)\dotfill &$4.417^{+0.020}_{-0.021}$ & $4.48\pm0.03$\\
 ~~~~$T_{\rm eff}$\dotfill &Effective Temperature (K)\dotfill &$5616^{+66}_{-65}$ & $5500\pm100$\\
 ~~~~$[{\rm Fe/H}]$\dotfill &Metallicity \dotfill &$0.04^{+0.25}_{-0.30}$ & $0.02\pm0.09$\\
@@ -317,7 +338,7 @@ The planetary parameters derived from the light curve and radial velocity analys
 ~~~~$e$\dotfill &Eccentricity \dotfill &$0.0126^{+0.014}_{-0.0089}$ & & $0.0077^{+0.0068}_{-0.0032}$\\
 ~~~~$a$\dotfill &Semi-major axis (AU)\dotfill &$0.01652^{+0.00050}_{-0.00056}$ & $0.0164^{+0.0005}_{-0.0006}$ & $0.01653\pm0.00046$\\
 ~~~~$\omega_*$\dotfill &Argument of Periastron (Degrees)\dotfill &$51^{+89}_{-190}$ & $-76^{+112}_{-23}$ & $43^{+28}_{-67}$\\
-~~~~$\rho_P$\dotfill &Density (cgs)\dotfill &$0.506^{+0.031}_{-0.030}$ & $0.54^{+0.07}_{-0.06}$& $0.595^{+0.036}_{-0.033}$\footnote{c}\\
+~~~~$\rho_P$\dotfill &Density (cgs)\dotfill &$0.506^{+0.031}_{-0.030}$ & $0.54^{+0.07}_{-0.06}$& $0.595^{+0.036}_{-0.033}$\tnote{c}\\
 ~~~~$logg_P$\dotfill &Surface gravity \dotfill &$3.155^{+0.018}_{-0.019}$ & $3.20\pm0.03$ & $3.184\pm0.015$\\
 ~~~~$T_{eq}$\dotfill &Equilibrium temperature (K)\dotfill &$2113\pm29$ & $1993^{+32}_{-33}$ & $2058\pm40$\\
 ~~~~$\Theta$\dotfill &Safronov Number \dotfill &$0.0279^{+0.0012}_{-0.0011}$\\
@@ -353,13 +374,9 @@ The planetary parameters derived from the light curve and radial velocity analys
 ~~~~$P_S$\dotfill &A priori non-grazing eclipse prob \dotfill &$0.2415\pm0.0021$\\
 ~~~~$P_{S,G}$\dotfill &A priori eclipse prob \dotfill &$0.3232\pm0.0030$\\
 \hline
-%\end{tabular}
-%\tablefoot{
-%\tablefoottext{a}{For comparison, the results from \cite{Hellier2009} that considered free eccentricity were used.}
-%%\tablefoottext{b}{Values converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.}
-%\tablefoottext{c}{Values converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs}
-%\tablefoottext{d}{Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.}}
+\insertTableNotes \\
 \end{longtable}
+\end{ThreePartTable}
 \end{landscape}
 
 \subsubsection{WASP-77Ab}
@@ -369,20 +386,34 @@ Almost all the stellar parameters are in agreement with \citep{Maxted2013}, exce
 
 The primary transit parameters, as well as the RV parameters and the derived planetary parameters, are consistent with the results from \cite{Maxted2013}.
 
+
 \begin{landscape}
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.
+\item[a] Values converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.
+\item[b] Value converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs.
+\end{TableNotes}
 \begin{longtable}{llcc}
 \caption{System parameter of WASP-77A}
 \label{tab:wasp77}
 \centering
 \tabularnewline
 \hline 
-~~~~~Parameter & Units & This work & \cite{Maxted2013}\\
+\endfirsthead
+\multicolumn{4}{c}
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+Parameter & Units & This work & \cite{Maxted2013}\\
+\hline
+\endhead
+Parameter & Units & This work & \cite{Maxted2013}\\
 \hline
 \smallskip\\\multicolumn{2}{l}{Stellar Parameters:}&\smallskip\\
 ~~~~$M_*$\dotfill &Mass (\(M_\odot\))\dotfill &$0.903^{+0.066}_{-0.059}$ & $1.002\pm0.045$\\
 ~~~~$R_*$\dotfill &Radius (\(R_\odot\))\dotfill &$0.910^{+0.025}_{-0.023}$ & $0.955\pm0.015$\\
 ~~~~$L_*$\dotfill &Luminosity (\(L_\odot\))\dotfill &$0.743^{+0.065}_{-0.058}$ & \\
-~~~~$\rho_*$\dotfill &Density (cgs)\dotfill &$1.692^{+0.056}_{-0.069}$\footnote{a} & $1.629^{+0.023}_{-0.028}$\footnote{a}\\
+~~~~$\rho_*$\dotfill &Density (cgs)\dotfill &$1.692^{+0.056}_{-0.069}$\tnote{a} & $1.629^{+0.023}_{-0.028}$\tnote{a}\\
 ~~~~$\log{g}$\dotfill &Surface gravity (cgs)\dotfill &$4.476^{+0.014}_{-0.015}$ & $4.33\pm0.08$\\
 ~~~~$T_{\rm eff}$\dotfill &Effective Temperature (K)\dotfill &$5617\pm72$ & $5500\pm80$\\
 ~~~~$[{\rm Fe/H}]$\dotfill &Metallicity \dotfill &$-0.10^{+0.10}_{-0.11}$ & $0.00\pm0.11$\\
@@ -395,7 +426,7 @@ The primary transit parameters, as well as the RV parameters and the derived pla
 ~~~~$e$\dotfill &Eccentricity \dotfill&$0.0074^{+0.0075}_{-0.0051}$\\
 ~~~~$a$\dotfill &Semi-major axis (AU)\dotfill &$0.02323^{+0.00056}_{-0.00052}$ & $0.0240\pm0.00036$\\
 ~~~~$\omega_*$\dotfill &Argument of Periastron (Degrees)\dotfill &$-30^{+170}_{-120}$\\
-~~~~$\rho_P$\dotfill &Density (cgs)\dotfill &$1.240^{+0.060}_{-0.067}$ & $1.33\pm0.04$\footnote{b}\\
+~~~~$\rho_P$\dotfill &Density (cgs)\dotfill &$1.240^{+0.060}_{-0.067}$ & $1.33\pm0.04$\tnote{b}\\
 ~~~~$logg_P$\dotfill &Surface gravity \dotfill &$3.467^{+0.012}_{-0.015}$ & $3.441\pm0.008$\\
 ~~~~$T_{eq}$\dotfill &Equilibrium temperature (K)\dotfill &$1695^{+25}_{-24}$\\
 ~~~~$\Theta$\dotfill &Safronov Number \dotfill &$0.0717\pm0.0021$\\
@@ -435,14 +466,11 @@ The primary transit parameters, as well as the RV parameters and the derived pla
 ~~~~$P_S$\dotfill &A priori non-grazing eclipse prob \dotfill &$0.1578^{+0.0018}_{-0.0012}$\\
 ~~~~$P_{S,G}$\dotfill &A priori eclipse prob \dotfill &$0.2063^{+0.0025}_{-0.0016}$\\
 \hline
-%\end{tabular}
-%\tablefoot{
-%\tablefoottext{a}{Value converted to cgs units multiplying by the Sun density $\rho_{\odot}=1.408\,$cgs.}
-%\tablefoottext{b}{Value converted to cgs units multiplying by the Jupiter density $\rho_{J}=1.33\,$cgs.}
-%\tablefoottext{c}{Values enclosed in parentheses correspond to the uncertainties of the last digits of the nominal value.}
-%}
+\insertTableNotes \\
 \end{longtable}
+\end{ThreePartTable}
 \end{landscape}
+
 
 \subsection{Transit Timing Variations}\label{ttvsection}
 
@@ -481,9 +509,10 @@ The epoch $-1184$ has the greatest error in our sample because it is not a compl
 
 When testing the goodness of the linear fit, $\chi^{2}_{red} =0.56$, while for a second degree polynomial is $\chi^{2}_{red}=0.48$, therefore an orbital decay can be discarded in agreement with theoretical estimations \citep{CollierCameron2018}.  
 
-\begin{table}[H]
-%\tablewidth{0pt}
+\begin{table}[ht]
 \centering
+%\tablewidth{0pt}
+\begin{threeparttable}
 \caption{Transit mid-times for WASP-18b}
 \label{times_wasp18}
 \begin{tabular}{cccc}
@@ -512,8 +541,13 @@ Epoch & Transit mid-time & TTV & References\\
 1169 & $2458026.83186$ & $-0.6\pm1.5$ & This work  \\
 \hline
 \end{tabular}
-%\tablebib{(1)~\citet{Hellier2009};
-%(2) \citet{Triaud2010}; (3) \citet{Maxted2013}.}
+\begin{tablenotes}
+\item \textbf{References:} 
+(1) \cite{Hellier2009}; 
+ (2) \cite{Triaud2010}; 
+ (3) \cite{Maxted2013}
+\end{tablenotes}
+\end{threeparttable}
 \end{table} 
 
 \subsubsection{WASP-19b}
@@ -532,11 +566,23 @@ The RMS from the linear ephemeris is about 75 seconds. The epoch of $-1011$ is t
 
 Considering all the transit times from Table~\ref{times_wasp19}, the linear fit has $\chi^{2}_{red} = 0.16$. This an indication of an overestimation of the errors. A second degree polynomial was also tested in order to reject or not a possible orbital decay. The goodness of that fit is $\chi^{2}_{red}=0.12$. 
 
+\begin{ThreePartTable}
+\begin{TableNotes}
+\item \textbf{References:} (1) \citet{Hebb2010}; (2) \citet{Anderson2010}; (3) \citet{Lendl2013}; (4) Exoplanet Transit Database (ETD) \url{var2.astro.cz/ETD}; (5) \citet{Tregloan2013}; (6) \citet{Mancini2013}; (7) \citet{Bean2013}; (8) \citet{Sedaghati2015}.
+\end{TableNotes}
 \begin{longtable}{cccc}
 \caption{Transit mid-times for WASP-19b}
 \label{times_wasp19}
 \tabularnewline
 \hline \hline
+\endfirsthead
+\multicolumn{4}{c}
+{\tablename\ \thetable\ -- \textit{Continued from previous page}} \\
+\hline
+Epoch & Transit mid-time & TTV & References\\
+      & (${\rm BJD_{TDB}}$) & (min) &  \\
+\hline
+\endhead
 Epoch & Transit mid-time & TTV & References\\
       & (${\rm BJD_{TDB}}$) & (min) &  \\
 \hline
@@ -600,10 +646,9 @@ Epoch & Transit mid-time & TTV & References\\
 1838 & $2457852.597807$ & $-0.7\pm2.3$ & This work\\ 
 2064 & $2458030.8751$  & $-1.5\pm3.2$& This work \\
 \hline
-%\end{tabular}
-%\tablebib{(1)~\citet{Hebb2010};
-%(2) \citet{Anderson2010}; (3) \citet{Lendl2013}; (4) Exoplanet Transit Database (ETD) \url{var2.astro.cz/ETD}; (5) \citet{Tregloan2013}; (6) \citet{Mancini2013}; (7) \citet{Bean2013}; (8) \citet{Sedaghati2015}.}
-\end{longtable} 
+\insertTableNotes \\
+\end{longtable}
+\end{ThreePartTable} 
 
 
 \subsubsection{WASP-77Ab}
@@ -619,10 +664,11 @@ The epochs $175$ and $229$ are above $2\,\sigma$ from the expected transit time 
 
 Considering all the transit times, the linear fit has $\chi^{2}_{red}=1.4$, and the second degree polynomial has $\chi^{2}_{red}=1.39$ . However, we chose the linear fit as it suppose a simpler model.
 
-\begin{table}
+\begin{table}[ht]
+\centering
+\begin{threeparttable}
 \caption{Transit mid-times for WASP-77Ab}
 \label{times_wasp77}
-\centering
 \begin{tabular}{cccc}
 \hline \hline
 Epoch & Transit mid-time & TTV & References\\
@@ -630,23 +676,25 @@ Epoch & Transit mid-time & TTV & References\\
 \hline
 -1140 & $2455870.45054$ & $-2.0\pm1.5$ & 1 \\
 -845 & $2456271.65888$ & $-2.0\pm1.4$ & 2 \\
--659 & $2456524.62617$ & $0.8\pm1.8$ & This work\footnote{a} \\
--606 & $2456596.70591$ & $-1.7\pm1.5$  & This work\footnote{a}  \\
+-659 & $2456524.62617$ & $0.8\pm1.8$ & This work\tnote{a} \\
+-606 & $2456596.70591$ & $-1.7\pm1.5$  & This work\tnote{a}  \\
 -92 & $2457295.7626$  & $1.2\pm1.3$& This work \\
 -89 & $2457299.84119$ &  $-1.0\pm1.3$ & This work \\
 175 & $2457658.88744$ & $-2.8\pm1.5$ & This work\\
-177 & $2457661.60987$   & $0.6\pm1.7$ & This work\footnote{a} \\
+177 & $2457661.60987$   & $0.6\pm1.7$ & This work\tnote{a} \\
 183 & $2457669.77054$ &  $1.4\pm1.4$  & This work  \\
-229 & $2457732.33382$ & $4.2\pm1.4$& This work\footnote{a} \\
+229 & $2457732.33382$ & $4.2\pm1.4$& This work\tnote{a} \\
 447 & $2458028.8159$  & $-1.8\pm6.5$ & This work\\ 
 \hline
 \end{tabular}
-%\tablebib{(1) \citet{Maxted2013}; (2) \cite{Turner2016}.}
-%\tablefoot{
-%\tablefoottext{a}{From the Exoplanet Transit Database (ETD)  \url{var2.astro.cz/ETD}}}
+\begin{tablenotes}
+\item \textbf{References:} (1) \citet{Maxted2013}; (2) \cite{Turner2016}.
+\item[a] From the Exoplanet Transit Database (ETD)  \url{var2.astro.cz/ETD}
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
 
-\subsection{Limits on an Additional Perturber\footnote{This section was done by Tobias C. Hinse and it is added for completeness of the study.}}\label{addper}
+\subsection{Limits on an Additional Perturber}\label{addper}
 %Comments: Do not delete
 %Written by Tobias C. Hinse
 %The following text was largely taken from TEMPIV paper as the underlying methodology follows exactly that
@@ -660,37 +708,40 @@ package \citep{go2003,go2008} which utilizes OpenMPI\footnote{\url{https://www.o
 
 Within the framework of the three-body problem, we integrated the orbits of one of our three hot Jupiters and an additional perturbing planet around their host stars. The mid-transit time was calculated iteratively to a high precision from a series of back-and-forth integrations once a transit of the transiting planet was detected. The best-fit radii of both the planet and the host star were accounted for. We then calculated an analytic least-squares regression to the time-series of transit numbers and mid-transit times to determine a best-fitting linear ephemeris with an associated RMS statistic for the TTVs. The RMS statistic was based on a 20-year integration corresponding to 7763 transits for WASP-18b, 9270 transits for WASP-19b, and 5371 transit events for WASP-77Ab. This procedure was then applied to a grid of masses and semi-major axes of the perturbing planet while fixing all the other orbital parameters. In this study, we have chosen to start the perturbing planet on a circular orbit that is co-planar with the transiting planet; this implies that $\Omega_2=0^{\circ}$ and $\omega_2=0^{\circ}$ for the perturbing and $\Omega_1 = 0^{\circ}$ for the transiting planet. This setting provides a most conservative estimate of the upper mass limit of a possible perturber \citep{bean2009, fukui2011, Hoyer2011, Hoyer2012}. For the interested readers, we refer to \citet{TEMP4}, which has studied the effects of TTVs on varying initial orbital parameters.
 
-\begin{table}
+\begin{table}[ht]
+\centering
+\begin{threeparttable}
 \caption{Approximate upper mass limits of a putative perturber in various orbital resonances for each system}
 \label{masstable}
-\centering
 \begin{tabular}{cccc}
 \hline \hline
 MMR & WASP-18 & WASP-19 & WASP-77A \\
 ($P_{2}/P_{1}$) & $[M_{\oplus}]$ & $[M_{\oplus}]$ & $[M_{\oplus}]$ \\
 \hline
-1:3 & 1.9    & 500\footnote{b} & 1.0 \\
+1:3 & 1.9    & 500\tnote{b} & 1.0 \\
 2:5 & 4.0    & -   & -   \\
-1:2 & 5.0\footnote{a} & 2.0 & 3.5 \\
+1:2 & 5.0\tnote{a} & 2.0 & 3.5 \\
 3:5 & -      & -      & 2.0 \\
-2:3 & -      & -      & 7.0\footnote{a} \\
+2:3 & -      & -      & 7.0\tnote{a} \\
 5:3 & -      & 6.0    & 6.0   \\
 7:4 & -      & -      & 10.0 \\
-2:1 & 25\footnote{a}    & 0.9    & 3.5 \\
-7:3 & 80.0\footnote{c}   & -      & -   \\
+2:1 & 25\tnote{a}    & 0.9    & 3.5 \\
+7:3 & 80.0\tnote{c}   & -      & -   \\
 5:2 & 10.0   & 3.0    & -   \\
 3:1 & 7.0    & 2.0    & 4.5 \\
-17:5 & 500.0\footnote{d} & -      & -    \\
-4:1 & 50.0   & 100.0\footnote{e}  & 60.0\footnote{f} \\
+17:5 & 500.0\tnote{d} & -      & -    \\
+4:1 & 50.0   & 100.0\tnote{e}  & 60.0\tnote{f} \\
 \hline
 \end{tabular}
-%\tablefoot{
-%\tablefoottext{a}{Very close to the general instability area.}
-%\tablefoottext{b}{This value is constraint by RV limit of 17.8 $[M_{\oplus}]$}
-%\tablefoottext{c}{This value is constraint by RV limit of 74.6 $[M_{\oplus}]$}
-%\tablefoottext{d}{This value is constraint by RV limit of 82.8 $[M_{\oplus}]$}
-%\tablefoottext{e}{This value is constraint by RV limit of 40.8 $[M_{\oplus}]$}
-%\tablefoottext{f}{This value is constraint by RV limit of 30.8 $[M_{\oplus}]$}}
+\begin{tablenotes}
+\item[a] Very close to the general instability area.
+\item[b] Constraint by RV limit of 17.8 $[M_{\oplus}]$
+\item[c] Constraint by RV limit of 74.6 $[M_{\oplus}]$
+\item[d] Constraint by RV limit of 82.8 $[M_{\oplus}]$
+\item[e] Constraint by RV limit of 40.8 $[M_{\oplus}]$
+\item[f] Constraint by RV limit of 30.8 $[M_{\oplus}]$
+\end{tablenotes}
+\end{threeparttable}
 \end{table} 
 
 In order to calculate the location of mean-motion resonances, we have used the same code to calculate MEGNO on the same parameter grid. However, this time we integrated each initial grid point for 1000 years, allowing this study to highlight the location of weak chaotic high-order mean-motion resonances. In short, MEGNO quantitatively measures the degree of stochastic behaviour of a non-linear dynamical system and has been proven useful in the detection of chaotic resonances \citep{go2001, hi2010}. In addition to the Newtonian equations of motion, the associated variational equations of motion are solved simultaneously allowing the calculation of MEGNO at each integration time step. The \texttt{MICROFARM} package implements the \texttt{ODEX}\footnote{\url{https://www.unige.ch/~hairer/prog/nonstiff/odex.f}} extrapolation algorithm to numerically solve the system of first-order differential equations.
@@ -703,14 +754,7 @@ In the following, we will present the results of each system for which we have c
 
 
 \subsubsection{WASP-18b}
-For the WASP-18b system we find a large region of instability when
-compared to the other two systems with the boundaries at the 1:2 interior
-and 2:1 exterior mean-motion resonance. By over-plotting the RMS scatter
-of mid-transit times ($\rm TTV_{\rm RMS}$) for a certain value, we find
-that the TTVs are relatively more sensitive at orbital architectures
-involving mean-motion resonances confirming the results by
-\citet{Agol2005} and \citet{Holman2005}. This also applies to WASP-19 and
-WASP-77A.
+For the WASP-18b system we find a large region of instability when compared to the other two systems with the boundaries at the 1:2 interior and 2:1 exterior mean-motion resonance. By over-plotting the RMS scatter of mid-transit times ($\rm TTV_{\rm RMS}$) for a certain value, we find that the TTVs are relatively more sensitive at orbital architectures involving mean-motion resonances confirming the results by \citet{Agol2005} and \citet{Holman2005}. This also applies to WASP-19 and WASP-77A.
 
 As shown in Figure~\ref{megno_wasp18}, we find that a perturbing body of mass (upper limit) around $7-500~M_{\oplus}$ will produce an RMS of $83\,{\rm s}$ when located in the $P_2/P_1=$ 7:3, 5:2, 3:1, 17:5 and 4:1 exterior resonance. For the 1:3 interior resonance, a perturber mass (upper limit) as small as $1.9~M_{\oplus}$ could also cause a RMS mid-transit time scatter of $83\,{\rm s}$.
 
@@ -756,7 +800,7 @@ mean-motion resonances of 2:1, 3:1 and 4:1 an additional planet of mass $3.5~M_{
 \label{megno_wasp77}
 \end{figure}
 
-\subsection{TTV period search\footnote{This section was done by Tobias C. Hinse and it is added for completeness of the study.}}
+\subsection{TTV period search}
 
 We have carried out a Lomb-Scargle period analysis \citep{Lomb1976, Scargle1982} for each system's TTVs residuals to search for a significant periodic trend. For this we applied the \texttt{LombScargle}\footnote{\url{http://docs.astropy.org/en/stable/stats/lombscargle.html}} (LS) algorithm available within the \texttt{Astropy} (v3.1.1) Python package \citep{2012cidu.conf...47V, 2015ApJ...812...18V}.
 
