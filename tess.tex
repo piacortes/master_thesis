@@ -1,6 +1,6 @@
 \chapter{TraMoS in the TESS era}\label{chap:tess}
 
-With the end of the Kepler mission, thousands of possible exoplanets remain as candidates known as Kepler Objects of Interest (KOI). The Kepler Object of Interest Network (KOINet: \citep{vonEssen2018,Freuddenthal2018}) in the Northern hemisphere, is a network of ground-based telescopes performing photometric follow-up of KOIs to continue what Kepler left undone. The main goal of KOINet is to combine Kepler data with ground-based observations in order to confirm and characterise the masses of exoplanet candidates using TTVs.
+With the end of the Kepler mission, thousands of possible exoplanets remain as candidates known as Kepler Objects of Interest (KOI). The Kepler Object of Interest Network (KOINet: \citep{vonEssen2018,Freuddenthal2018}) in the Northern hemisphere, is a network of ground-based telescopes performing photometric follow-up of KOIs to continue what Kepler left undone. The main goal of KOINet is to combine Kepler data with ground-based observations in order to confirm and characterize the masses of exoplanet candidates using TTVs.
 
 It is crucial for TTV studies to continue the work of space missions from ground. It is unlike to only with space-based observations to cover the interaction timescales to dynamically prove the TTV signal and the existence of some exoplanets companions, as in shown in Figure \ref{koinet} from the KOINet project. In this figure, new data from ground-based telescopes were fundamental to confirm the TTV signal, and therefore to perform a proper characterization of the system.
 
@@ -11,35 +11,68 @@ It is crucial for TTV studies to continue the work of space missions from ground
 \label{koinet}
 \end{figure}
 
-The new space telescope Transiting Exoplanet Survey Satellite (TESS: \cite{Ricker2014}) is providing its first discoveries. The TESS observation plan divided in 13 sectors will challenge the confirmation process and characterization of possible exoplanets. During the $\sim27$ days of each sector, many candidates will not be observed enough time to confirm and characterize them. However, this special feature will provide a huge amount of new transit events of already known transiting exoplanets. Combining the new TESS data with ground-base follow- up observations, many possible TTVs could be confirm or rule out. Moreover, \cite{Ballard2018} predicted that around 5\% of the planets discovered by TESS will exhibit measurable TTV signals, similar to Kepler’s results.
+The new space telescope Transiting Exoplanet Survey Satellite (TESS: \cite{Ricker2014}) is providing its first discoveries. The TESS observation plan divided in 13 sectors will challenge the confirmation process and characterization of possible exoplanets. During the $\sim27$ days of each sector, many candidates will not be observed enough time to confirm and characterize them. However, this special feature will provide a huge amount of new transit events of already known transiting exoplanets, specially for those with short-period. Combining the new TESS data with ground-base follow- up observations, many possible TTVs could be confirm or rule out. Moreover, \cite{Ballard2018} predicted that around 5\% of the planets discovered by TESS will exhibit measurable TTV signals, similar to Kepler’s results.
 
-Thus, for the future stage of the TraMoS project, archival data - collected since 2008 - will be combined with the upcoming TESS data and new ground-based observations using one-meter class telescopes. 
+Between Sector 1 and Sector 13, TESS observed around 15\% of stars with confirmed exoplanets but not all of them will produce a transit event within the 27 days of a sector duration (see Figure \ref{chap:tess}). Anyway, several complete light curves could be obtain and analyzed. TESS data are reduced by the Science Processing Operations Center (SPOC) and after being processed, they are archived in the Mikulski Archive for Space Telescopes (MAST) catalogue, where can be download directly by anyone. 
 
-In the following subsections, I present a re-analisys of the TTV curves of the hot Jupiters: WASP-18b, WASP-19b and WASP-77Ab including new transit times from TESS: 45, 28, and 15 for WASP-18b, WASP-19b and WASP-77Ab respectively. TESS data are reduced by the Science Processing Operations Center (SPOC) and after being processed, they are archived in the Mikulski Archive for Space Telescopes (MAST) catalogue, where can be download directly. 
+\begin{figure}
+\centering
+\includegraphics[width=1.0\columnwidth]{imagenes/tess_match.pdf}
+\caption{Match between all the stars with confirmed exoplanets and the TESS targets from Sector 1 to Sector 13. The empty red circles correspond to the star with confirmed exoplanets distributed by its position in the sky while the filled red circles indicate if the exoplanet has an orbital period of less than 27 days, which is the duration of one TESS sector. The black cross indicates which star was already observed by TESS. However, this does not indicate that transit light curves will be provided for sure since the orbital period of the exoplanet needs to be taken into account. Thus, TESS will only provide transit data of the filled red circle with a black cross exoplanets.}
+\label{match_tess}
+\end{figure}
 
-In order to compute the transit time of each light curve, I used EXOFASTv2 but only to fit the transit time. The remaining planetary parameters were fixed with the values from Tables \ref{tab:wasp18}, \ref{tab:wasp19}, \ref{tab:wasp77}.
+Thus, for the future stage of the TraMoS project, archival data - collected since 2008 - will be combined with the upcoming TESS data and new ground-based observations using one-meter class telescopes. As in the KOINet project, TESS will supply with consecutive transit light curves from southern targets - during its first year of mission - that will contribute to complete TTV curve specially for short-period planets, such as hot Jupiters. 
+
+In the following subsections, I present a re-analisys of the TTV curves of the hot Jupiters: WASP-18b, WASP-19b and WASP-77Ab including new transit times from TESS: 45, 28, and 15 for WASP-18b, WASP-19b and WASP-77Ab respectively.
+
+In order to compute the transit time of each light curve, I used EXOFASTv2 but only to fit the transit time. The remaining planetary parameters were fixed with the values from Tables \ref{wasp18}, \ref{tab:wasp19}, \ref{tab:wasp77}.
 
 \section{WASP-18b}
 
-The star WASP-18 was observed continuously during Sector 2 and 3 of the TESS mission, between August 22nd and October 18th, 2018. Theses observations provided 47 transits events of WASP-18b, but only 45 of them were complete transits, and then included into the TTV analysis. Figure \ref{wasp18_ttv} shows the
+The star WASP-18 was observed continuously during Sector 2 and 3 of the TESS mission, between August 22nd and October 18th, 2018. Theses observations provided 47 transits events of WASP-18b, but only 45 of them were complete transits, and then included into the TTV analysis. 
+
+The new best linear fit for the period considering the 63 transit times is:
+
+\begin{equation}
+P = 0.941452232 \pm 2.7\times10^{-8} ~\rm days
+\end{equation}
+
+This value differs from the previous reported in Eq.~\ref{eq1_w18} by $0.016$ seconds, and the error was reduced to a third.
+
+Figure \ref{wasp18_ttv} shows the extension of the TTV curve of WASP-18b considering the new data from TESS. Including these new transit times, the scatter from the linear ephemeris was reduced to 47 seconds. A possible second order fit - of a hypothetical orbital decay - has a reduced chi squared of $\chi^{2}_{red}=0.18$, while the linear fit - which corresponds to the linear ephemeris - has $\chi^{2}_{red}=0.19$. Furthermore, there is no strong evidence for an orbital decay in this system.
+
+Considering the lack of a clear sinusoidal TTV signal with even more transit time data, suggest that this exoplanet does not have a close-in companion. Moreover, the existence of a possible far-out companion is rejected by the lack of an additional signal in RV data. With this study, I can not discard the presence of any companion of WASP-18b but if there is one, it should be small. 
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 %\vspace{0.1cm}\hspace{0.2cm}
 \includegraphics[width=1.0\textwidth]{imagenes/WASP18_TTV.png}
-\caption{Observed minus calculated mid-transit times (TTV) for WASP-18b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 63 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$, where the quadratic trend looks almost horizontal.  The RMS scatter from the linear ephemeris is 47 seconds.}
+\caption{Observed minus calculated mid-transit times (TTV) for WASP-18b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 63 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$. The RMS scatter from the linear ephemeris is 47 seconds.}
 \label{wasp18_ttv}
 \end{figure}
 
 \section{WASP-19b}
 
+WASP-19 was observed during Sector 9 between February 28th and March 26th, 2019. During this time, 29 complete transit event were provided, and then considered to compute the new TTVs of WASP-19b. The new best fit for the orbital period P, considering the total of 88 transit times is:
+
+\begin{equation}
+P = 0.788838940 \pm 3.0\times10^{-8} ~\rm days
+\end{equation}
+
+The previous reported value in Eq.~\ref{eq1_wasp19} is $0.007$ seconds larger.
+
+As in the case of WASP-18b, the TTV scatter of WASP-19b was reduced when including new transit times data from TESS: $TTV_{RMS}=65~\rm seconds$. Again, a second order fit is not better that the linear one: $\chi^{2}_{red,lineal}= XXX$ and $\chi^{2}_{red,cuad}= XXX$.
+
 \begin{figure}[H]
 %\vspace{0.1cm}\hspace{0.2cm}
 \includegraphics[width=1.0\textwidth]{imagenes/WASP19_TTV.png}
-\caption{Observed minus calculated mid-transit times (TTV) for WASP-19b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 87 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$, where the quadratic trend looks almost horizontal.  The RMS scatter from the linear ephemeris is 65 seconds.}
+\caption{Observed minus calculated mid-transit times (TTV) for WASP-19b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 87 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$. The RMS scatter from the linear ephemeris is 65 seconds.}
 \label{wasp19_ttv}
 \end{figure}
 
 \section{WASP-77Ab}
+
+
 
 \section{WASP-36b}
