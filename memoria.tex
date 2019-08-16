@@ -12,7 +12,7 @@
 \memoria{TESIS PARA OPTAR AL GRADO DE}
 \comision{CESAR FUENTES GONZALEZ, RICARDO MUÑOZ VIDAL, TOBIAS CORNELIUS HINSE}
 
-\auspicio{Departamento de Postgrado y Postítulo de la Virrectoría de Asuntos Académicos de la Universidad de Chile}
+\auspicio{Departamento de Postgrado y Postítulo de la Vicerrectoría de Asuntos Académicos de la Universidad de Chile}
 % ----------------------------------------------------------------------
 % Configuracion temporal
 % ----------------------------------------------------------------------
@@ -35,8 +35,8 @@
 \usepackage{tabulary}
 
 
-\renewcommand{\appendixtocname}{Apéndices}
-\renewcommand{\appendixpagename}{Apéndices}
+\renewcommand{\appendixtocname}{Appendix}
+\renewcommand{\appendixpagename}{Appendices}
 
 % configuracion de captions
 \captionsetup{font=small}
@@ -70,6 +70,8 @@
 \usepackage{rotating}
 \usepackage{longtable}
 \usepackage[stable]{footmisc}
+\usepackage{minted}
+\usepackage{pdfpages}
 
 \begin{document}
 
@@ -155,12 +157,8 @@
 % ----------------------------------------------------------------------
 
 \begin{appendices}
-\input{pipeline.tex} 	     % especificaciones del NAO
-%\input{apendice_setup_experimental.tex}  % setup experimental
-%\input{apendice_lie.tex} 	             % grupos de Lie
-%\input{apendice_intentos.tex}	         % Lo que se intentó y no funcionó
-%\input{apendice_imu.tex}	             % derivacion de modelo cinemático de la IMU
-%\input{apendice_agradecimientos.tex}	 % agradecimientos
+\input{pipeline.tex} 	  
+
 \end{appendices}
 
 \end{document} 
