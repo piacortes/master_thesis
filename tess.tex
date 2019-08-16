@@ -38,21 +38,21 @@ P = 0.941452232 \pm 2.7\times10^{-8} ~\rm days
 
 This value differs from the previous reported in Eq.~\ref{eq1_w18} by $0.016$ seconds, and the error was reduced to a third.
 
-Figure \ref{wasp18_ttv} shows the extension of the TTV curve of WASP-18b considering the new data from TESS. Including these new transit times, the scatter from the linear ephemeris was reduced to 47 seconds. A possible second order fit of a hypothetical orbital decay, has a reduced chi squared of $\chi^{2}_{red}=0.18$, while the linear fit - which corresponds to the linear ephemeris - has $\chi^{2}_{red}=0.19$. Furthermore, there is no strong evidence for an orbital decay in this system as proposed by \cite{Wilkins2017}
+Figure \ref{wasp18_ttv} shows the extension of the TTV curve of WASP-18b considering the new data from TESS. Including these new transit times, the scatter from the linear ephemeris was reduced to 47 seconds. A possible second order fit of a hypothetical orbital decay, has a reduced chi squared of $\chi^{2}_{red}=0.35$, while the linear fit - which corresponds to the linear ephemeris - has $\chi^{2}_{red}=0.36$. Furthermore, as there is no strong evidence for an orbital decay in this system as proposed by \cite{Wilkins2017}, the simpler model should be chosen: the linear model.
 
 Considering the lack of a clear sinusoidal TTV signal with even more transit time data, suggest that this exoplanet does not have a close-in companion in MMR. Moreover, the existence of a possible far-out companion is rejected by the lack of an additional signal in RV data. With this study, I can not discard the presence of any kind of companion of WASP-18b but if there is one, it should be small. 
 
 
 \begin{figure}[h]
 %\vspace{0.1cm}\hspace{0.2cm}
-\includegraphics[width=1.0\textwidth]{imagenes/WASP18_TTV.png}
+\includegraphics[width=1.0\textwidth]{imagenes/WASP18_TTV.pdf}
 \caption{Observed minus calculated mid-transit times (TTV) for WASP-18b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 63 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$. The RMS scatter from the linear ephemeris is 47 seconds.}
 \label{wasp18_ttv}
 \end{figure}
 
 \section{WASP-19b}
 
-WASP-19 was observed during Sector 9 between February 28th and March 26th, 2019. During this time, 29 complete transit event were provided, and then considered to compute the new TTVs of WASP-19b. The new best fit for the orbital period P, considering a total of 88 transit times is:
+WASP-19 was observed during Sector 9 between February 28th and March 26th, 2019. During this time, 29 complete transit event were provided, and then considered to compute the new TTVs of WASP-19b show in Figure \ref{wasp19_ttv}. The new best fit for the orbital period P, considering a total of 88 transit times is:
 
 \begin{equation}
 P = 0.788838940 \pm 3.0\times10^{-8} ~\rm days
@@ -60,11 +60,11 @@ P = 0.788838940 \pm 3.0\times10^{-8} ~\rm days
 
 The previous reported value in Eq.~\ref{eq1_wasp19} is $0.007$ seconds larger.
 
-As in the case of WASP-18b, the TTV scatter of WASP-19b was reduced when including new transit times data from TESS to: $TTV_{RMS}=65~\rm seconds$. Again, a second order fit is not better that the linear one: $\chi^{2}_{red,lineal}= XXX$ and $\chi^{2}_{red,cuad}= XXX$.
+As in the case of WASP-18b, the TTV scatter of WASP-19b was reduced when including new transit times data from TESS to: $TTV_{RMS}=65~\rm seconds$. Again, a second order fit is not better that the linear one: $\chi^{2}_{red,lineal}= 0.65$ and $\chi^{2}_{red,cuad}= 0.64$. 
 
 \begin{figure}[ht]
 %\vspace{0.1cm}\hspace{0.2cm}
-\includegraphics[width=1.0\textwidth]{imagenes/WASP19_TTV.png}
+\includegraphics[width=1.0\textwidth]{imagenes/WASP19_TTV.pdf}
 \caption{Observed minus calculated mid-transit times (TTV) for WASP-19b. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 87 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$. The RMS scatter from the linear ephemeris is 65 seconds.}
 \label{wasp19_ttv}
 \end{figure}
@@ -73,6 +73,23 @@ As in the case of WASP-18b, the TTV scatter of WASP-19b was reduced when includi
 
 The third target presented in Cortés-Zuleta et al. 2019 (submitted), was observed in Sector 4 between October 18th and November 15th, 2018.  During this time, the planet transited its host star 17 times, but only 15 were complete light curves. From the previous study presented in this thesis, WASP-77Ab was the most interesting target, since its variation from the linear ephemeris was around  $121\,\rm seconds$.  After including the new transit times, the best linear fit for the orbital period is:
 
+\begin{equation}
+P = 1.36002866 \pm 1.7\times10^{-7} ~\rm days
+\end{equation}
+
+In Eq.~\ref{eq1_w77}, the value for the orbital period P is $0.01\,\rm seconds$ lower, and the scatter from the linear ephemeris was reduced to 86 seconds. The linear fit has a reduced chi squared of $\chi^2_{red}=1.03$, while a second degree polynomial has $\chi^2_{red}=0.72$. Anyway, the second order fit is highly dominated by the outlier transit time of epoch $229$ (see Figure \ref{wasp77_ttv}). After removing it, the reduced chi squared is  $\chi^2_{red}=0.37$. In all cases, the best fit correspond to the linear ephemeris.
+
+As the previous two targets, extending the TTV curve of WASP-77Ab with transit times from TESS light curve supported the conclusion from the previous study: there is not a clear sinusoidal signal in the variations of the transit times, that could suggest a periodic TTV in WASP-77Ab. However, from the current work this target is the one with less transit time data, thus, follow-up observations would be required to confirm the no existence of close-in companions in MMR.
+
+
+\begin{figure}[ht]
+%\vspace{0.1cm}\hspace{0.2cm}
+\includegraphics[width=1.0\textwidth]{imagenes/WASP77_TTV.pdf}
+\caption{Observed minus calculated mid-transit times (TTV) for WASP-77Ab. The dashed black line corresponds to the proposed linear ephemeris, i.e. zero deviation from the predicted transit time  computed from our refined orbital period. For that, we considered 26 transit times from the TraMoS project (in light blue), published works and TESS (both in black). The grey area corresponds to the error propagation at $1\sigma$. The RMS scatter from the linear ephemeris is 86 seconds.}
+\label{wasp77_ttv}
+\end{figure}
 
 
 \section{WASP-36b}
+
+The exoplanet WASP-36b was selected as the
