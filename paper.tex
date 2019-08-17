@@ -104,7 +104,7 @@ The SMARTS 1 m has the Y4KCam instrument which is a $4{\rm K} \times 4{\rm K}$ C
 
 For the observation on the Warsaw 1.3 m telescope, we used a $2048 \times 4096$ CCD camera chip with a 1.4 square degrees of FoV and 0.26" per pixel scale. No windowing or binning was used during the observations on both SMARTS 1m and the Warsaw 1.3m telescope.
 
-As suggested by \cite{Southworth2009}, most of our observation, especially those conducted after 2011, used the defocus technique, which allows longer exposure times in bright targets and improves the photometric precision. We adjust the exposure time during the observations if the weather is not ideal. The recorded Julian Date in the Coordinated Universal Time (${\rm JD_{UTC}}$) were converted into Barycentric Julian Date in the Barycentric Dynamical Time standard (${\rm BJD_{TDB}}$) by following the procedure as in \citet{Eastman2010}.
+Most of our observation, especially those conducted after 2011, used the defocus technique as suggested by \cite{Southworth2009},  which allows longer exposure times in bright targets and improves the photometric precision. We adjust the exposure time during the observations if the weather is not ideal. The recorded Julian Date in the Coordinated Universal Time (${\rm JD_{UTC}}$) were converted into Barycentric Julian Date in the Barycentric Dynamical Time standard (${\rm BJD_{TDB}}$) by following the procedure as in \citet{Eastman2010}.
 
 We reduced the data by using our custom pipeline. It follows the standard procedures of reduction, calibration, and aperture photometry, but customized for each used instrument. The pipeline semi-automatically finds the best aperture and ring size, for the sky that produces the light curve with less RMS. Then, we manually choose the reference stars to produce the differential light curves for each targets.
 
@@ -156,7 +156,7 @@ We were not able to separate the contribution of the two companions of the binar
 
 We set previous published values as uniform priors for the DE-MCMC in all the transit, RV parameters, quadratic limb darkening coefficients and $T_{c}$. The priors were taken from the discovery papers of WASP-18b \citep{Hellier2009}, WASP-19b \citep{Hebb2010} and WASP-77Ab \citep{Maxted2013}. 
 
-In order to reduce significantly the convergence time of the chains during the EXOFASTv2 fitting, we started from shorter chains. Thus, the total time to complete that run is reduced. After it finished, we took the values from its best model and used them as priors for the next short run. This process was repeated until the chains were converged and well-mixed.
+In order to reduce significantly the convergence time of the chains during the EXOFASTv2 fitting, we started from shorter chains. Thus, the total time to complete that run is reduced. After it finished, we took the values from its best model and used them as priors for the next short run. This process was repeated until the chains converged and were well-mixed.
 
 The best-fitted model is presented in Figure~\ref{transits} for our transit data from the TraMoS project, and in Figure~\ref{rv} for the RV archival data.
 
@@ -291,7 +291,7 @@ The results of the global fit of WASP-19 are listed in Table~\ref{tab:wasp19}, i
 
 To estimate the stellar parameters of WASP-19, we used as priors the stellar spectroscopic parameters from \cite{Hebb2010}. Thus, in general, our results are in agreement with the those from the discovery paper. The most important discrepancies are the density of the star $\rho_*$ and the surface gravity $\log{g}$, showing $+2.5\sigma$ and $-3.2\sigma$ difference, respectively. Comparing with the results from \cite{Lendl2013}, ours are all in good agreement.
 
-For values of the primary transit parameters obtained from the light curves, the greatest differences are found in the orbital inclination $i$ and the total transit duration $T_{14}$. We report an inclination value $5.1\sigma$ smaller than \cite{Hebb2010}, but in agreement with the estimate of \cite{Lendl2013}. In the other hand, our estimation of $T_{14}$ is significantly larger than \cite{Hebb2010} by $9\sigma$, but the difference is only $3.5\sigma$ when compared with \cite{Lendl2013}. We also report a preciser impact parameter $b$ and transit depth $\delta$.
+For values of the primary transit parameters obtained from the light curves, the greatest differences are found in the orbital inclination $i$ and the total transit duration $T_{14}$. We report an inclination value $5.1\sigma$ smaller than \cite{Hebb2010}, but in agreement with the estimate of \cite{Lendl2013}. In the other hand, our estimation of $T_{14}$ is significantly larger than \cite{Hebb2010} by $9\sigma$, but the difference is only $3.5\sigma$ when compared with \cite{Lendl2013}. We also report a more precise impact parameter $b$ and transit depth $\delta$.
 
 As the same RV data set from the discovery paper \citep{Hebb2010} was used to perform our analysis, the almost identical values in the RV semi-amplitude $K$ is not a surprise. Moreover, the values from \cite{Lendl2013} are also in agreement. 
 
@@ -382,7 +382,7 @@ Parameter & Units & This work & \cite{Hebb2010}\tnote{a} & \cite{Lendl2013}\\
 \subsubsection{WASP-77Ab}
 Table~\ref{tab:wasp77} lists the results of the global fit of WASP-77Ab, in comparison with the values from its discovery paper \citep{Maxted2013} on which photometry and RV data were used. No other previous work has reported bulk measurements for this system.
 
-Almost all the stellar parameters are in agreement with \citep{Maxted2013}, except for a $-9.7\sigma$ difference in the stellar surface gravity $\log{g}$, where our reported value is preciser.  
+Almost all the stellar parameters are in agreement with \citep{Maxted2013}, except for a $-9.7\sigma$ difference in the stellar surface gravity $\log{g}$, where our reported value is more precise.  
 
 The primary transit parameters, as well as the RV parameters and the derived planetary parameters, are consistent with the results from \cite{Maxted2013}.
 
@@ -503,9 +503,7 @@ The orbital period $P$ in Eq.~\ref{eq1_w18} is in complete agreement with the va
 
 Table~\ref{times_wasp18} lists the TTV of our transit times and also, of data from previous works \citep{Triaud2010,Hellier2009,Maxted2013b} of WASP-18b. 
 
-The top panel of Figure~\ref{all_ttv} is the linear plot of TTV versus epoch for this planet. The deviations of the transit times from the linear ephemeris has an RMS of 83 seconds. The greater deviations come from the transit time of the epochs $-1904$ and $-1184$, which are over the linear ephemeris by $2.5\sigma$ and $1.9\sigma$, respectively. If those values are removed, the RMS decreases to 61 seconds. Considering all the transit times in Table~\ref{times_wasp18} without the epochs $-1904$ and $-1184$, all the TTVs lie within $1.6\sigma$ in the linear fit. 
-
-The epoch $-1184$ has the greatest error in our sample because it is not a complete transit.
+The top panel of Figure~\ref{all_ttv} is the linear plot of TTV versus epoch for this planet. The deviations of the transit times from the linear ephemeris has an RMS of 83 seconds. The greater deviations come from the transit time of the epochs $-1904$ and $-1184$, which are over the linear ephemeris by $2.5\sigma$ and $1.9\sigma$, respectively. If those values are removed, the RMS decreases to 61 seconds. Considering all the transit times in Table~\ref{times_wasp18} without the epochs $-1904$ and $-1184$, all the TTVs lie within $1.6\sigma$ in the linear fit. The epoch $-1184$ has the greatest error in our sample because it is not a complete transit.
 
 When testing the goodness of the linear fit, $\chi^{2}_{red} =0.56$, while for a second degree polynomial is $\chi^{2}_{red}=0.48$, therefore an orbital decay can be discarded in agreement with theoretical estimations \citep{CollierCameron2018}.  
 
