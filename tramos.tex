@@ -4,29 +4,31 @@ The Transit Monitoring in the South (TraMoS) project started in 2008 aiming to p
 
 To date, almost 400 transit events have been observed of 144 transiting exoplanets (see Figure \ref{tramos}). The bulk of the targets in the TraMoS project are hot Jupiters due to its short orbital period and large transit depth. Several facilities were used to perform the photometric follow-up such as the VLT of European Southern Observatory, the SMARTS 0.9 m and 1 m at Cerro Tololo Inter-American Observatory, the Danish 1.54 m at La Silla Observatory, SWOPE and Du Pont telescopes at Las Campanas Observatory and SOAR telescope at Cerro Pachón Observatory, among others. The diameter size of the used telescopes ranges from 0.6 meters to 8 meters. However, in the last stage of the TraMoS project, we built the team expertise using 1 meter-class telescopes, for example in the Danish, SWOPE and SMARTS.
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=1.0\columnwidth]{imagenes/tramos.png}
-\caption{Histogram of the 30 transiting exoplanets with the largest amount of observations within the TraMoS project. The exoplanets WASP-4b and WASP5-b were presented in \cite{Hoyer2012} and \cite{Hoyer2013}. The results from the analysis of WASP-18b, WASP-19b and WASP77-Ab are in Cortés-Zuleta et al. 2019 (submitted, see Chapter \ref{chap:paper} for further details). In any of those systems a significant TTV signal was detected.}
+\includegraphics[width=0.9\columnwidth]{imagenes/tramos.png}
+\caption{Histogram of the 30 transiting exoplanets with the largest amount of observations within the TraMoS project. The exoplanets WASP-4b and WASP5-b were presented in \cite{Hoyer2012} and \cite{Hoyer2013}. The results from the analysis of WASP-18b, WASP-19b and WASP77-Ab are in Cortés-Zuleta et al. 2019 (submitted, see Chapter \ref{chap:paper} for further details). In none of those systems a significant TTV signal was detected.}
 \label{tramos}
 \end{figure}
 
 
 The first studies within the TraMoS project were conducted by Sergio Hoyer, former PhD student of Professor Patricio Rojo. In summary, a possible orbital decay of WASP-43b \citep{Hoyer2016b} and OGLE-TR-113b \citep{Hoyer2016} was ruled out, and no significant TTV signal was detected in WASP-4b \citep{Hoyer2012} and WASP-5b \citep{Hoyer2013}.
 
-\section{Transiting Exoplanets}
-The Transit method is today the most successful technique to discover extrasolar planets (see Fig.~\ref{amount_exoplanet}). The Kepler mission was launched in 2009 and during its almost nine years of operation provided thousands of discoveries due to this method.
+In the following section \ref{lightcurve}, I describe the light curve produced from a transiting exoplanet --the principal target of the TraMoS project --  what information about the planet can be obtain from them and how these light curves can give us information about the architecture of this kind of systems. Then, in section \ref{ttv}, I detail on an specific type of phenomena of transiting exoplanets: the variation of the transit time of its light curve (TTV).
 
-\begin{figure}[H]
+\section{Transiting exoplanets' light curve\label{lightcurve}}
+The Transit method is today the most successful technique to discover extrasolar planets (see Figure \ref{amount_exoplanet}). The Kepler mission was launched in 2009 and during its almost nine years of operation provided thousands of discoveries due to this method.
+
+\begin{figure}[ht]
 \centering
 \includegraphics[width=0.7\columnwidth]{imagenes/exo_dischist_cumulative.png}
-\caption{Accumulative number of discovered exoplanets by year.}
+\caption{Accumulative number of discovered exoplanets by year and their corresponding method of discovery. To date, the Transit technique, along with Radial Velocity, are the most successful methods to discovery exoplanets. Figure from the NASA Exoplanet Archive (\url{exoplanetarchive.ipac.caltech.edu})}
 \label{amount_exoplanet}
 \end{figure}
 
 The light curve produced by a transit event provides important information of the planetary system. For example, it is the only way on which we can derive directly the proportion between the exoplanet and star radius. It can also gives information about the impact parameter, and therefore, the inclination of the orbit. 
 
-In Figure~\ref{transit} is described the architecture of a transiting exoplanet. Thanks to its geometry, the transit event as well as some parameters of the planetary system can be described with a few simple relations (cite Seager and Mallean y Winn).  When the planet passes in front of its star produced a dimming in its flux called primary transit. The maximum drop during the transit event defines the transit depth $\Delta{F}$:
+In Figure~\ref{transit} is described the architecture of a transiting exoplanet. Thanks to its geometry, the transit event as well as some parameters of the planetary system can be described with a few simple relations \cite{Seager2003,Winn2010}.  When the planet passes in front of its star produced a dimming in its flux called primary transit. The maximum drop during the transit event defines the transit depth $\Delta{F}$:
 
 \begin{equation}
     \Delta{F} = \left(\frac{R_{p}}{R_{*}}\right)^2 
@@ -68,13 +70,13 @@ Depending on the orbital and physical parameters of the exoplanet, the shape of 
 \label{transit_examples}
 \end{figure}
 
-\section{Transit Timing Variations}
+\section{Transit Timing Variations\label{ttv}}
 
-Since the discovery of the first exoplanet, one of the principal questions that arose was: are they alone in their systems? The idea of multiplanetary systems is a consequence of our knowledge about the planetary system where we live in, and until today the Solar System has the larger number of orbiting planets. Besides the Solar System, Kepler-90 has the same number of confirmed exoplanets: eight. Statistically, around a 20\% of the confirmed exoplanets live in a multiplanetary system, but this number is theoretically larger (cite). 
+Since the discovery of the first exoplanet, one of the principal questions that arose was: are they alone in their systems? The idea of multiplanetary systems is a consequence of our knowledge about the planetary system where we live in, and until today the Solar System has the larger number of orbiting planets. Besides the Solar System, Kepler-90 has the same number of confirmed exoplanets: eight. Statistically, around a 20\% of the confirmed exoplanets live in a multiplanetary system\footnote{Information obtained from the NASA Exoplanet Archive \url{exoplanetarchive.ipac.caltech.edu}}, but this number is theoretically larger. \cite{Fressin2013} computed the occurrence of exoplanets through numerical simulation in Kepler data, obtaining that around $52\%$ of the stars should have at least one planet within a 85 days-orbit.
 
 The Transit Timing Variations (TTV) technique was first proposed as a way to detect Earth-mass planets in multiplanetary systems due to gravitational interactions with a transiting exoplanet \citep{Holman2005,Agol2005}. However, TTVs can be also used to measure tidal interactions between the planet and the star or to detect exomoons \citep{Kipping2009a,Kipping2009b}, among others phenomena. 
 
-For a given light curve of a transiting exoplanet (see Fig. \ref{transit}), the transit time $T_{c}$ (or central time of the transit) is computed as:
+For a given light curve of a transiting exoplanet (see Figure \ref{transit}), the transit time $T_{c}$ (or central time of the transit) is computed as:
 
 \begin{equation}
 T_{c} = \frac{t_T}{2}
@@ -98,10 +100,10 @@ Where $\alpha_e = a_1/(a_2(1-e_2))$ is the ratio of the semi-major axis of the p
 
 The TTV method is an efficient tool to search for additional unseen companions since, in order to employ this technique, only photometry of the transiting exoplanet during a transit events is required. Moreover, this technique enhances its sensitivity when the two bodies in the system are close to Mean Motion Resonances (MMR) \citep{Agol2005,Steffen2005,Agol2007} (see Figure~\ref{rms_ttv_amplitude}) . 
 
-\begin{figure}
+\begin{figure}[ht]
 \centering
-\includegraphics[width=0.6\columnwidth]{imagenes/rms_ttv_amplitude}
-\caption{Example of a system with a transiting exoplanet of $1~M_{J}$ in a 10-day orbit, around a star with $0.367~M_{\odot}$. The perturber is an Earth-mass planet. Panel \textbf{a} is an O-C diagram showing the measured TTV when the pertuber has a period of 16.11 days, not in Mean Motion Resonance with the transiting planet. Panel \textbf{b} shows the TTV when the transiting planet and the perturbing planet are near an interior 2:1 resonance. The amplification of the TTV signal is by an order of magnitude. (Figure from \cite{Haghighipour2011})}
+\includegraphics[width=1.0\columnwidth]{imagenes/jupiter_ttv.pdf}
+\caption{Example of a system with a transiting exoplanet of $1~M_{J}$ in a 10-day orbit and an Earth-mass perturber planet. The top panel is an Observed minus Computed diagram showing the measured TTV of the Jupiter-mass planet when the pertuber has a period of 16.11 days, not in Mean Motion Resonance with the transiting planet. The panel at the bottom shows the TTV of the transiting planet when both are near an interior 2:1 resonance. In this case the small planet has a period of 19.7 days. The amplification of the TTV signal is by an order of magnitude. Figure generated with the Python package: \texttt{ttv2fast2furious}.}
 \label{rms_ttv_amplitude}
 \end{figure}
 
@@ -109,10 +111,8 @@ The TTV method is an efficient tool to search for additional unseen companions s
 
 Since the discovery of \cite{Holman2010}, around 20 exoplanets have been discovered and characterized thanks to the measurement of variations on their transit times and the following proper dynamical model ling of the system. Most of them are Kepler systems because of its high duty-cycle, on which it provided years on transits data. Kepler stopped working on 2018, but the Transit Exoplanet Satellite Survey (TESS) is currently providing its first results providing planetary systems showing TTVs.  For example, two exoplanets (possibly one Jupiter and a sub-Saturn like) were recently discovered by \cite{Dawson2019} orbiting TOI-216, in near 2:1 resonance. 
 
-To date, only two hot Jupiters have been found to show TTV signals due to the presence of additional companions on their systems: WASP-47b \citep{Becker2015} and Kepler-730b \citep{Canas2019}, even though the TTV was proposed as a technique to search for additional companions of gas giants. The lack of observed companions in hot Jupiter systems could provide crucial information about planetary formation processes. 
+To date, only two hot Jupiters have been found to show TTV signals due to the presence of additional companions on their systems: WASP-47b \citep{Becker2015} and Kepler-730b \citep{Canas2019}, even though the TTVs was proposed as a technique to search for additional companions of gas giants. The lack of observed companions in hot Jupiter systems could provide crucial information about planetary formation processes. Through the TTV method not only the transiting exoplanet is being studied but the whole planetary system. 
 
-Through the TTV method not only the transiting exoplanet is being studied but the whole planetary system. Even the lack of variation in the transit timing gives clues related to the formation of close-in gas giant. 
-
-The no detection of TTV is also important: architecture of the system.
+\cite{Steffen2012b} analyzed Kepler data in order to constraint the occurrence rate of companions in hot Jupiter system. In a sample of 63 hot Jupiter candidates, none of them show evidence of possible companions in their system. When comparing with other types of exoplanets, 30\% of hot Neptunes candidates could have companions and 10\% of warm Jupiter candidates. This could suggest that hot Jupiter may have a different formation processes on which smaller companions are not allowed in their system: probably they are ejected through planet-planet scatter during migration. TTV studies could provide important clues about formation processes and dynamical evolution, and their mass and period dependence. 
 
 
