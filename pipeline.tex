@@ -1,10 +1,10 @@
 \chapter{Aperture photometry pipeline}\label{chap:pipeline}
 
-Since the beginning of the TraMoS project, an aperture photometry pipeline has been in development, on which several graduates and undergraduates students worked and are currently working on it. This pipeline is Python-based and includes standard procedures of reduction, calibrations, and aperture photometry, including bias and flat-field corrections. The user needs to give the coordinates of the target and reference stars and a range of pixels for a possible aperture. Then, to produce high-precision light curves of the target and reference stars, the pipeline semi-automatic finds the best aperture and ring size, for the sky that produces the less RMS in the light curves. 
+Since the beginning of the TraMoS project, an aperture photometry pipeline has been in development, on which several graduates and undergraduates students worked and are currently working on it. This pipeline is Python-based and includes standard procedures of reduction, calibrations, and aperture photometry, including bias and flat-field corrections. The user needs to give the coordinates of the target and reference stars and a range of pixels for a possible aperture. Then, to produce high-precision light curves of the target and reference stars, the pipeline semi-automatically finds the best aperture and ring size, for the sky that produces the less RMS in the light curves. 
 
 The pipeline works with a specific directories' structure where all the needed information should be:
 \begin{itemize}
-\item raw: Folder containing the raw data of the observations. It could be fits files or compressed fits (e.g \textit{fit.ZIP}).
+\item raw: Folder containing the raw data of the observations. It could be FITS files or compressed FITS (e.g \textit{fit.ZIP}).
 \item calib: This folder should include the flats -- sky or dome -- and bias files.
 \item data: Empty folder which will contain the output data after the aperture photometry procedure.
 \item figures: Empty folder on which all the figures generated in the reduction process will be stored.
@@ -13,7 +13,7 @@ The pipeline works with a specific directories' structure where all the needed i
 \item tramos\_custom.sty: A customizable file containing the information related to the telescope, target's name, filter, date of the observation, RA, DEC and target's magnitude. When the pipeline finishes, it fills this file with the best aperture size obtained.
 \end{itemize}
 
-I have implemented dictionaries to ease the use of the pipeline with different telescopes. One of the biggest problems that I faced when I started reducing data, was the distinctness between the headers produced from different telescopes. For example, while some of them recorded the type of filter as \textit{FILTER}, others use \textit{FILTERB}. Also, as the TraMoS project has been collecting data for more than 10 years ago, some of our used telescopes were updated with new CCDs, producing that the pipeline was no longer functional. Currently, the pipeline works with data from the following telescopes: 
+I have implemented dictionaries to ease the use of the pipeline with different telescopes. One of the biggest problems that I faced when I started reducing data, was the distinctness between the FITS headers produced from different telescopes. For example, while some of them recorded the type of filter as \textit{FILTER}, others use \textit{FILTERB}. Also, as the TraMoS project has been collecting data for more than 10 years ago, some of our used telescopes were updated with new CCDs, producing that the pipeline was no longer functional. Currently, the pipeline works with data from the following telescopes: 
 \begin{itemize}
 \item La Silla Observatory: Danish 1.54 m (previous and after 2017) and REM.
 \item Cerro Tololo Inter-American Observatory: SMARTS 0.9 m and 1 m.
